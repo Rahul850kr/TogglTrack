@@ -1,5 +1,5 @@
 import React from 'react'
-import BellIcon from 'react-bell-icon';
+// import BellIcon from 'react-bell-icon';
 import {
   
     Box,
@@ -46,7 +46,7 @@ const Sidebar = ({ children }) => {
       >
         <Box ml="1" display={"flex"} alignItems="center" marginRight="50px" marginTop="10px">
        <Image  margin="auto"   h="20px" w="80px" src="https://assets.website-files.com/5f699d08507c7daf18b16e6a/61235a16de9b7eb783fe6b73_toggl-track_.png"  />
-          <BellIcon w={2} h={2} color="white"/>
+          {/* <BellIcon w={2} h={2} color="white"/> */}
         </Box>
         
         {/* Timer */}
