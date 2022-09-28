@@ -41,5 +41,5 @@ userController.post("/login", async (req, res) => {
 });
 
 module.exports = {
-  userController,
+  userController
 };
