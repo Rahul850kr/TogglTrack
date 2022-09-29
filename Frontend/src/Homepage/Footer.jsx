@@ -59,7 +59,7 @@ export default function Footer() {
       bg={useColorModeValue('rgb(44, 19, 56)', 'gray.900')}
       color={useColorModeValue('white', 'gray.200')}>
       <Container as={Stack} maxW={['96%']} py={10} >
-        <Box w={[270, 270, 270]} ml={[-10]}>  
+        <Box w={[250, 260, 270]} ml={[-10]}>  
             <Image src="https://i.postimg.cc/1RDLznkj/tt.png" alt="" />
         </Box>
         <SimpleGrid columns={{ base: 1, sm: 2, md:3,lg:6 }} spacing={8}  >
@@ -114,7 +114,7 @@ export default function Footer() {
         </SimpleGrid>
       </Container>
 
-      <Stack direction={['column', 'row']} ml={['1rem']}
+      <Stack direction={['column', 'row']} ml={['2rem']}
       marginBottom={["30px"]} spacing={6} justifyContent={["center"]}>
             <SocialButton label={'Twitter'} href={'#'}>
               <FaTwitter />

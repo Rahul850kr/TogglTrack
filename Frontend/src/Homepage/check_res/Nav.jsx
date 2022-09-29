@@ -17,7 +17,7 @@ text-decoration : none;
 padding : 0 1rem;
 height : 100%;
 cursor : pointer;
-
+// border:1 px solid white;
 
 &.active {
     // color : #15cdfc;

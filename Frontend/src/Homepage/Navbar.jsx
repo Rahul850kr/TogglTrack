@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import style from "./navbar.module.css";
+import Product from "./Product";
+import Track from "./Track";
+import Career from "./Career";
 
 import {
   Accordion,
@@ -12,7 +15,7 @@ import {
 } from "@chakra-ui/react";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
 
-import { Nav,NavLink,Bars,NavMenu,NavBtn,NavBtnLink } from './check_res/NavElements'
+import { Nav,NavLink,Bars,NavMenu,NavBtn,NavBtnLink } from './check_res/Nav'
 import { useDisclosure } from '@chakra-ui/react'
 import {
   Drawer,
@@ -26,15 +29,15 @@ import {ChevronRightIcon } from '@chakra-ui/icons'
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-//   const navigate=useNavigate();
+  const navigate=useNavigate();
 
   var token=localStorage.getItem("token")
    console.log(token);
 
-//   const handleLogout=()=>{
-//     localStorage.removeItem("token")
-//     navigate("/")
-//     }
+  const handleLogout=()=>{
+    localStorage.removeItem("token")
+    navigate("/")
+    }
  
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [placement, setPlacement] = React.useState('right')
@@ -51,16 +54,18 @@ const Navbar = () => {
           : { backgroundColor: "rgb(44, 19, 56)" }
       }
     >
-      <div className={style.navbar_main1} style ={{marginRight:"20%"}} >
+      <div className={style.navbar_main1} style ={{marginRight:"10%"}} >
         <div className={style.navbar_sub2}  >
           <NavLink to ="/">
             <RouterLink to={"/"} >
               <h1
               style={{
-                fontSize: "30px",
+                width:"10rem",
+                fontSize: "28px",
                 margin: "0px 10px",
                 color: "#e57cd8",
                 fontWeight: "700",
+                border:"1px solid black"
               }}
             >
               toggl track
@@ -93,7 +98,7 @@ const Navbar = () => {
                   <p style={{padding:"10px 0px 10px 10px"}}>Why Track? <ChevronRightIcon/></p>
                   <p style={{padding:"10px 0px 10px 10px"}}>Careers <ChevronRightIcon/></p>
                   <p style={{padding:"10px 0px 10px 10px"}}>Book a Demo </p>
-
+                  
                   <div>
                     <button>Try for free</button>
                   </div>
@@ -118,7 +123,7 @@ const Navbar = () => {
             }
             className={style.toogle1} >
 
-            {/* <NavLink to = "/produts"> */}
+            <NavLink to = "/produts">
           
             <AccordionItem style={{border:"none"}}>
               <h2 >
@@ -165,11 +170,11 @@ const Navbar = () => {
               </h2>
               <AccordionPanel className={style.button1}>
                 <div >
-                  {/* <Product /> */}
+                  <Product />
                 </div>
               </AccordionPanel>
             </AccordionItem>
-            {/* </NavLink> */}
+            </NavLink>
 
             <NavLink to = "/Prices">         
             <AccordionItem style={{border:"none"}}>
@@ -204,7 +209,7 @@ const Navbar = () => {
             </AccordionItem >
             </NavLink>
             
-            {/* <NavLink to = "/track"> */}
+            <NavLink to = "/track">
             <AccordionItem style={{border:"none"}}>
               <h2>
                 <AccordionButton
@@ -246,14 +251,14 @@ const Navbar = () => {
               </h2>
               <AccordionPanel className={style.button1}>
                 <div className={style.navbar_track}>
-                  {/* <Track /> */}
+                  <Track />
                 </div>
               </AccordionPanel>
             </AccordionItem>
-            {/* </NavLink> */}
+            </NavLink>
 
             <div className={style.line}></div>
-            {/* <NavLink to = "/career"> */}
+            <NavLink to = "/career">
             <AccordionItem style={{border:"none"}}>
               <h2>
                 <AccordionButton
@@ -297,11 +302,11 @@ const Navbar = () => {
               </h2>
               <AccordionPanel className={style.button1}>
                 <div className={style.navbar_careers}>
-                  {/* <Career /> */}
+                  <Career />
                 </div>
               </AccordionPanel>
             </AccordionItem>
-            {/* </NavLink> */}
+            </NavLink>
 
 
             <div className={style.line}></div>
@@ -313,7 +318,7 @@ const Navbar = () => {
       </div>
   
 
-      {/* <NavBtn >
+      <NavBtn >
           <NavLink to = "/BookDemo">
                       Book a demo   
                       </NavLink>
@@ -334,7 +339,7 @@ const Navbar = () => {
             <NavBtnLink to="/signup">
                 Try for free
             </NavBtnLink>
-      </NavBtn> */}
+      </NavBtn> 
     </div>
     
     </Nav>
