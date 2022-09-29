@@ -1,5 +1,5 @@
 import React from 'react'
-import { Nav,NavLink,Bars,NavMenu,NavBtn,NavBtnLink } from './NavElements'
+import { Nav,NavLink,Bars,NavMenu,NavBtn,NavBtnLink } from './Nav'
 
 const ResNavbar = () => {
   return (
@@ -10,7 +10,7 @@ const ResNavbar = () => {
             <p style={{fontSize:"50px",color:"#E57CD8"}}>track</p>
         </NavLink>
         <Bars/>
-        <NavMenu>
+        <NavMenu >
             <NavLink to = "/produts">
             Produts
             </NavLink>
