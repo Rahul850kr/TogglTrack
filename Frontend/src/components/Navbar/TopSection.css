@@ -1,0 +1,35 @@
+.top-section {
+    background-color: #e57dd8;
+    font-size: 12px;
+    padding: 5px 0px;
+    color: black;
+  }
+  
+  .top-section-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .top-section-items {
+    text-decoration: none;
+    color: black;
+    margin: 0px 1rem;
+  }
+  
+  .top-section-items:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .top-section-items-icon {
+    font-size: 10px;
+    margin-left: 5px;
+  }
+  
+  .top-section-dropdown {
+    display: flex;
+    align-items: center;
+  }
