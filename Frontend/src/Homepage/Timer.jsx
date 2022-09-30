@@ -33,7 +33,6 @@ const Timer = () => {
   return (
     <div className={tstyle.maintimer}>
       <div className={tstyle.timer}>
-        {/* first child */}
         <div className={tstyle.timer1}>
           <h5 className={tstyle.headingTimer}>
             <span>Stand-up meeting</span>
@@ -42,7 +41,6 @@ const Timer = () => {
             {second < 10 ? "0" + second : second}
           </h5>
         </div>
-        {/* second child start */}
         <div>
           {" "}
           <button className={tstyle.btn}
@@ -51,7 +49,6 @@ const Timer = () => {
             {!pause ? <BsStop /> : <BsPause />}
           </button>
         </div>
-        {/* //second div end */}
       </div>
       <div>
         {" "}

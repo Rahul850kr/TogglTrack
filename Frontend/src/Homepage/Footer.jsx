@@ -114,8 +114,8 @@ export default function Footer() {
         </SimpleGrid>
       </Container>
 
-      <Stack direction={['column', 'row']} ml={['2rem']}
-      marginBottom={["30px"]} spacing={6} justifyContent={["center"]}>
+      <Stack direction={{base:"column",md:"row",lg:"row"}} spacing={8} ml={['2rem']}
+      marginBottom={["30px"]}  justifyContent={["center"]}>
             <SocialButton label={'Twitter'} href={'#'}>
               <FaTwitter />
             </SocialButton>

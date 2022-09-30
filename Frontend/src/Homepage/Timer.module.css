@@ -92,24 +92,33 @@ background: rgb(232, 113, 97);
 }
 @media only screen and (max-width: 650px) {
 .timer{
-    width:300px;
+    width:220px;
     
 }
 .headingTimer{
     text-align: justify;
-    margin-left: -5px;
-    font-size: 13px;
+    margin-left: -8px;
+    font-size: 10px;
     
 }
 .btn{
      
     background: rgb(232, 113, 97);
-        height: 50px;
-        width: 50px;
+        height: 30px;
+        width: 30px;
         font-size: 20px;
-        margin-Top: 7px;
-        padding: 11px;
-        padding-Left: 15px;
+        margin-Top: 15px;
+        padding: 2px;
+        padding-Left: 6px;
         border-Radius: 50%;
     }
+    .textundertimer{
+        font-size: 18px;
+    }
+    .textundertimer2{
+        font-size: 18px;
+
+    }
+
+ 
 }
