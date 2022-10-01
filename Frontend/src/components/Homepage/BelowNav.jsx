@@ -29,15 +29,15 @@ const BelowNav = () => {
         <Box > <Timer /> </Box>
       </Stack>
       
-       <Stack direction={['column', 'row']} ml={16} >
-       <Text as='b' fontSize={{ base: '12px', md: '18px', lg: '18px' }} 
+       <Stack direction={['column', 'row']} ml={['0','0','16']} >
+       <Text as='b' fontSize={{ base: '12px', md: '18px', lg: '18px' }}
         color='#fff'>TRUSTED BY OVER 6 MILLION USERS ACROSS 120 COUNTRIES</Text>
        </Stack>
       
-      <Stack direction={['column', 'row']} ml={[16]} mt={'1rem'} >
+      <Stack direction={['column', 'row']} mt={['0','0','1rem']} >
         
-        <Box w={[300, 800, 900]} h="5rem">
-            <Image 
+        <Box w={[300, 800, 900]} h="5rem" >
+            <Image ml={['3','5','16']} 
             src='https://public-assets.toggl.com/b/static/21b44745982a70f8f66a90507e5f6ee1/66a3b/brands-mixed-desktop-light.avif'
              alt=''></Image>
         </Box>

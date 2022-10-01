@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BsPause, BsStop } from "react-icons/bs";
-import tstyle from "./Timer.module.css";
+import tstyle from "./styles/Timer.module.css";
 const Timer = () => {
   const [second, setsecond] = useState(0);
   const [mintues, setmintues] = useState(0);

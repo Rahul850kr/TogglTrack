@@ -6,10 +6,13 @@ import MainHome from '../../Homepage/MainHome'
 import Clientofproject from '../Project/Clientofproject'
 import NavofProject from '../Project/NavofProject'
 import Taskmanage from '../Task/TaskManager'
+import MainHome from '../Homepage/MainHome';
+
 
 const AllRoutes = () => {
   return (
     <Routes>
+
       <Route path="/" element={<MainHome/>}/>
       <Route path="/login" element={<Login/>} />
       <Route path="/signup" element= {<Signup/>} />
