@@ -2,6 +2,7 @@
 const {userController} = require("./Routes/user.routes");
 const {connection} = require("./configs/db")
 const express = require("express");
+const Addtodorouter = require("./Routes/Addtodo.routes");
 const PORT = process.env.PORT || 8080;
 
 const app = express();
@@ -12,7 +13,7 @@ app.get("/",(req,res)=>{
 });
 
 app.use("/user",userController)
-
+app.use("/task",Addtodorouter)
 app.listen(PORT,async ()=>{
     try{
         await connection;
