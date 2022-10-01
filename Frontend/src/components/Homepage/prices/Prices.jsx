@@ -6,9 +6,14 @@ import PlanComparison from "./PlanComparison";
 import PriceSignup from "./PriceSignup";
 import PricesTop from "./PricesTop";
 import Trial from "./Trial";
+import Footer from "../Footer";
+
 const Prices = () => {
   return (
     <>
+    {/* Navbar here */}
+
+    
     <Box
     mt="-50px"
     bg="#2c1338"
@@ -18,14 +23,15 @@ const Prices = () => {
       textAlign={"center"}
     >
       <PricesTop />
-
       <Trial />
-
       <Faqs />
       <PriceSignup />
       <PlanComparison/>
       <Apps/>
     </Box>
+
+    <Footer/>
+
     </>
   );
 };

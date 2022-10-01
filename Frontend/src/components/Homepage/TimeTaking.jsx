@@ -11,21 +11,22 @@ import user7 from "./Images/user7.PNG";
 import user8 from "./Images/user8.PNG";
 import user9 from "./Images/user9.PNG";
 
-
 import {ChevronRightIcon} from "@chakra-ui/icons";
+
 
 const TimeTaking = () => {
   return (
     <>
-     <Box bg='#fef6f3' p='5rem'>
-        
+     <Box bg='#fef6f3' p='5rem'>        
         <Box>
         <Text as='b' mt={'2rem'} fontSize={{ base: '24px', md: '30px', lg: '38px' }}>Time tracking for all your productivity and</Text>
         <br></br>
         <Text as='b' mb={'2rem'} fontSize={{ base: '24px', md: '30px', lg: '38px' }}>profitability needs</Text>
          </Box>
+
         <Stack direction={{base:"column",md:"row",lg:"row"}} spacing={8} ml={['2rem']} p={10}
            marginBottom={["30px"]}  justifyContent={["center"]} >
+
           <Button  bg='#ffebbd' color='#5f2a4c' borderRadius='30'>
             <Text fontSize={{ base: '9px', md: '16px', lg: '16px' }}>Employee Time Tracking</Text>
           </Button>

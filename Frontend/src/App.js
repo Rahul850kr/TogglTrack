@@ -1,11 +1,6 @@
 
 import './App.css';
-
 import AllRoutes from './components/AllRoutes/AllRoutes';
-import Prices from './components/Homepage/prices/Prices';
-
-
-
 
 
 function App() {
@@ -13,11 +8,6 @@ function App() {
     <div className="App">
 
  <AllRoutes />
-
-   <Prices/>
-
-    
-
     </div>
   );
 }

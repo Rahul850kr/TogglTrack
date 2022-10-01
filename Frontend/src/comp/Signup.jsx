@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { Stack } from "@chakra-ui/react";
 import { Box, Flex, Text } from "@chakra-ui/layout";
 // import { signUp } from "../store/auth/auth.actions";
+import {signUp} from "../Redux/AuthReducer/action"
 
 const Signup = () => {
   const [form, setForm] = useState({});
@@ -21,11 +22,13 @@ const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("hidc");
-    console.log("form", form);
-    localStorage.setItem("userData", JSON.stringify(form));
-    const UserInfo = JSON.parse(localStorage.getItem("userData"));
-    console.log("UserInfo", UserInfo);
+    console.log(form)
+    // console.log("hidc");
+    // console.log("form", form);
+    // localStorage.setItem("userData", JSON.stringify(form));
+    // const UserInfo = JSON.parse(localStorage.getItem("userData"));
+    // console.log("UserInfo", UserInfo);
+    dispatch(signUp(form))
     // dispatch(signUp(UserInfo));
     navigate("/login");
   };
@@ -93,7 +96,7 @@ const Signup = () => {
                 <br />
                 <input
                   type="text"
-                  name="USERNAME"
+                  name="name"
                   className="inputbox"
                   placeholder="Username"
                   onChange={hanldeChange}
@@ -111,7 +114,7 @@ const Signup = () => {
                   className="inputbox"
                   placeholder="Email"
                   onChange={hanldeChange}
-                  name="Email"
+                  name="email"
                   ref={ref}
                   value={form.Email}
                   // {...register("email", { required: true })}
