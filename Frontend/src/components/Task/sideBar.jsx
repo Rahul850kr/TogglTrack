@@ -32,7 +32,9 @@ import {
 import {FaTag,FaQuestion, FaUserTie } from "react-icons/fa";
 
 import {FaStopwatch  } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 const Sidebar = ({ children }) => { 
+  const navigate = useNavigate()
     const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <div  style={{border:"1px solid black"}}>
@@ -58,7 +60,7 @@ const Sidebar = ({ children }) => {
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex> 
      
-      <Flex
+      <Flex onClick={()=>navigate("/timer")}
         align="center"
         p="1"
         mx="2"
@@ -83,7 +85,7 @@ const Sidebar = ({ children }) => {
             as={FaStopwatch}
           />
         )}
-      <Text color="white" fontSize="13px">Timer</Text>
+      <Text color="white" fontSize="13px" >Timer</Text>
       </Flex>
     
       
@@ -165,7 +167,7 @@ const Sidebar = ({ children }) => {
       {/* //project */}
     
     
-       <Flex
+       <Flex   onClick={()=>navigate("/project")}
         align="center"
         p="1"
         mx="2"
@@ -202,7 +204,7 @@ const Sidebar = ({ children }) => {
 
       <>
       
-      <Flex
+      <Flex  onClick={()=>navigate("/client")}
         align="center"
         p="1"
         mx="2"
@@ -227,7 +229,7 @@ const Sidebar = ({ children }) => {
             as={FiUser}
           />
         )}
-      <Text color="white" fontSize="13px">Client</Text>
+      <Text color="white" fontSize="13px" >Client</Text>
       </Flex>
      
       </>
@@ -343,9 +345,9 @@ const Sidebar = ({ children }) => {
         }
       }>
         
-        <Flex    >
+        <Flex >
       <FaUserTie color="white"  fontSize="25px"/>
-        <Text color="white" ></Text>
+        <Text color="white" >NAME OF LOGGEDIN</Text>
         </Flex>
        
       

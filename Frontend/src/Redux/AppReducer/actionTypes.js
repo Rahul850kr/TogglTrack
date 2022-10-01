@@ -1,0 +1,6 @@
+export const ADDPROJECT = "addproject"
+export const DELETEPROJECT = "deleteproject"
+export const GETPROJECT = "getproject"
+export const ADDCLIENT = "addclient"
+export const GETCLIENT = "getclient"
+export const DELETECLIENT = "deleteclient"
