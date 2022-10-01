@@ -54,7 +54,8 @@ const Navbar = () => {
           : { backgroundColor: "rgb(44, 19, 56)" }
       }
     >
-      <div className={style.navbar_main1} style ={{marginRight:"10%"}} >
+      <div className={style.navbar_main1} 
+      style ={{marginRight:"10%"}} >
         <div className={style.navbar_sub2}  >
           <NavLink to ="/">
             <RouterLink to={"/"} >
@@ -65,7 +66,6 @@ const Navbar = () => {
                 margin: "0px 10px",
                 color: "#e57cd8",
                 fontWeight: "700",
-                border:"1px solid black"
               }}
             >
               toggl track
@@ -109,8 +109,6 @@ const Navbar = () => {
           {/* Drawer Ends */}
 
           <NavMenu >
-          
-
           <Accordion
             allowToggle
             display="flex"
@@ -130,16 +128,14 @@ const Navbar = () => {
                 <AccordionButton
                   background="rgb(44, 19, 56) "
                   border="#412a4c "
-                  
                   style={
                     nav === true
-                      ? { backgroundColor: "#FCE5D8", color: "black" }
+                      ? { backgroundColor: "#FCE5D8",
+                       color: "black" }
                       : null
-                  }
-                  
+                  }    
                 >
-                  <Box
-                    onClick={() => {
+                  <Box onClick={() => {
                       setNav(!nav);
                     }}
                     flex="1"
@@ -151,8 +147,7 @@ const Navbar = () => {
                         : null
                     }
                     background="rgb(44, 19, 56); "
-                    color="#ece1d7"
-                    
+                    color="#ece1d7"   
                   >
                     Product
                   </Box>

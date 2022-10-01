@@ -75,13 +75,15 @@ export default function SignupCard() {
   }
 
   return (
-    <Box bg={"rgb(44, 19, 56)"} color={"white"} maxWidth={"100%"} mr={"10rem"} border={"1px solid white"}>
+    <Box bg={"rgb(44, 19, 56)"} color={"white"} maxWidth={"100%"} ml={"2rem"} mr={"10rem"}>
 
       <Stack spacing={8} mx={'auto'} maxW={'xl'} py={12} px={6} >
       <Stack pt={6}>
-              <Text p={"0px"} align={'justify'} fontSize={"20"} marginRight={"40px"} ml={8}>
-               Bill accurately, measure profitability,manage workloads-and spend less time on it all.
-              </Text>
+              <Text fontSize={{ base: '12px', md: '16px', lg: '24px' }} ml={[2]} >
+               Bill accurately, measure profitability,manage  </Text> 
+              <Text fontSize={{ base: '12px', md: '16px', lg: '24px' }} ml={[2]}>
+                workloads-and spend less time on it all.</Text> 
+            
             </Stack>
         <Box  
           rounded={'lg'}
@@ -90,7 +92,7 @@ export default function SignupCard() {
           <Stack spacing={4} >
             
             <FormControl id="email" isRequired>
-              <Input width={"100%"} type="email" placeholder="email" value={email} onChange={handleEmailChange} />
+              <Input width={'100%'} type="email" placeholder="email" value={email} onChange={handleEmailChange} />
             </FormControl>
             <FormControl id="password" isRequired>
       
@@ -118,7 +120,7 @@ export default function SignupCard() {
                 loadingText="Submitting"
                 borderRadius={[20,50]}
                 size="lg"
-                 width={[50,200,200]}
+                 width={[100,200,200]}
                  marginRight={"6%"}
                 bg={'rgb(229, 124, 216)'}
                 color={'white'}
@@ -135,22 +137,25 @@ export default function SignupCard() {
                 <Text fontSize={{ base: '4px', md: '16px', lg: '18px' }} >Sign up with email</Text>
               </Button>
 
-             <Text fontSize={{ base: '8px', md: '16px', lg: '18px' }} py={2}>or signup with : </Text>
+             <Text fontSize={{ base: '8px', md: '16px', lg: '16px' }} py={2}>or signup with : </Text>
              <a href="/"> 
-             <Button bg={'#2c1338'} border={["1px solid white"]} h={[5,14,14]}  borderRadius={[50,100,100]}>
+             <Button bg={'#2c1338'} border={["1px solid white"]} h={[5,12,12]} width={[100,50,50]} 
+             borderRadius={[50,100,100]}>
               <BsGoogle size={[20]} _hover={{bg:"#2c1338"}}/>
               </Button></a>
               <a href="/">
-              <Button bg={'#2c1338'} border={["1px solid white"]} h={[5,14,14]} borderRadius={[50,100,100]} >
+              <Button bg={'#2c1338'} border={["1px solid white"]} h={[5,12,12]} width={[100,50,50]}
+              borderRadius={[50,100,100]} >
               <BsApple size={[20]} _hover={{bg:"#2c1338"}}/>
               </Button>
               </a>
             </Stack>
             
             <Stack pt={6}>
-              <Text align={'justify'} fontSize={{ base: '6px', md: '12px', lg: '12px' }}>
-              By signing up, you agree to our terms of service, privacy policy and to receiving marketing communication from Toggl Track. You can opt out anytime.
-              </Text>
+              <Text fontSize={{ base: '12px', md: '12px', lg: '13px' }}>
+              By signing up, you agree to our terms of service, privacy policy and to receiving</Text>
+              <Text fontSize={{ base: '12px', md: '12px', lg: '14px' }}>marketing communication from Toggl Track. You can opt out anytime.</Text>
+              
             </Stack>
           </Stack>
         </Box>

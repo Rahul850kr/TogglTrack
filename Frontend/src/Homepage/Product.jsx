@@ -1,12 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import style from "./product.module.css";
-const product = () => {
+import {ArrowForwardIcon} from "@chakra-ui/icons";
+const Product = () => {
   return (
-    <div className={style.product_main1}>
-      <p className={style.product_p}>FOR EVERY NEED </p>
-      <div className={style.product_main2}>
-        <div className={style.product_sub1}>
+    <div className={style.mainbox}>
+      <p className={style.product_tophead}>FOR EVERY NEED </p>
+     
+     
+     <div className={style.justflex}>
+      <div className={style.leftbox} style={{border:"1px solid red"}}>
+       <div className={style.tom}>
+       <div style={{border:"1px solid black"}}>
+       <div className={style.leftin}>
           <div>
             {" "}
             <img
@@ -15,39 +21,23 @@ const product = () => {
               alt=""
             />
           </div>
-          <div>
+          <div className={style.key}>
             <Link to={"keyfeatures"}>
-              <p className={style.product_h1}> Key Features </p>
+              <p className={style.heading}> 
+              <b>Key Features</b></p>
             </Link>
             <p className={style.product_h2}>
               {" "}
-              View features by need, from time tracking to project annd team
+              View features by need, from time 
+              tracking to project and team
               management
             </p>
           </div>
         </div>
-        <div className={style.product_sub2}>
-          <div>
-            <img
-              className={style.product_img1}
-              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTMiIGhlaWdodD0iNTMiIHZpZXdCb3g9IjAgMCA1MyA1MyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGVsbGlwc2UgY3g9IjI2LjQwNzMiIGN5PSIzMS43NTQzIiByeD0iMTkuMzM1MyIgcnk9IjIxLjI0NTUiIGZpbGw9IiNGRUZCRkEiLz4KPHBhdGggZD0iTTE4LjQ4MjQgMzkuNDE4NkMyMC43MDEyIDQzLjI0OTcgMjguOTQyNSA0OC4xMjU4IDM1LjI4MiAzOS4wNzAzIiBzdHJva2U9IiNGMkJERUMiIHN0cm9rZS13aWR0aD0iMS43NTIxOSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxlbGxpcHNlIGN4PSIyNi40MDczIiBjeT0iMzEuNzU0MyIgcng9IjE5LjMzNTMiIHJ5PSIyMS4yNDU1IiBmaWxsPSIjRkVGQkZBIi8+CjxwYXRoIGQ9Ik0xOC40ODI0IDM5LjQxODZDMjAuNzAxMiA0My4yNDk3IDI4Ljk0MjUgNDguMTI1OCAzNS4yODIgMzkuMDcwMyIgc3Ryb2tlPSIjRjJCREVDIiBzdHJva2Utd2lkdGg9IjEuNzUyMTkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8ZWxsaXBzZSBjeD0iMjYuNDA3MyIgY3k9IjMxLjc1NDMiIHJ4PSIxOS4zMzUzIiByeT0iMjEuMjQ1NSIgZmlsbD0iI0ZFRkJGQSIvPgo8cGF0aCBkPSJNMTguNDgyNCAzOS40MTg2QzIwLjcwMTIgNDMuMjQ5NyAyOC45NDI1IDQ4LjEyNTggMzUuMjgyIDM5LjA3MDMiIHN0cm9rZT0iI0YyQkRFQyIgc3Ryb2tlLXdpZHRoPSIxLjc1MjE5IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPHBhdGggZD0iTTEyLjA2ODggMzAuOTc3MkM3LjIxNDk5IDMyLjE2MjQgNy4xMzI2MyAzNS4wNjIyIDcuNTMzNjYgMzYuNTk0MkM4LjM2OTQyIDM4LjA5NjkgNy44MjQ0NiAzNy43MDUxIDcuNTMzNjYgMzYuNTk0MkM2LjkzMjc4IDM1LjUxMzkgNS42MTgxOSAzMy40NTQzIDIuOTgyMjggMjkuOTc4N0MtMTEuMDUwMiAxMS40NzYxIDI4LjU3NiAtMC42Mzk1MDIgMzYuMTQ4MSAwLjAyNjExMTZDNDYuMTQzMyAwLjAyNjExMTYgNjEuNTkwNSAxMS42MDc5IDQ3LjA1MiAyMy45ODgzQzMyLjUxMzUgMzYuMzY4NyAzNi4xNDgxIDIwLjk5MjkgMjkuMzMzMiAyMC45OTI5QzI5LjMzMzIgMjAuOTkyOSA2LjYxNjg2IDE2LjIwMDUgMTIuMDY4OCAzMC45NzcyWiIgZmlsbD0iI0U1N0NEOCIvPgo8L3N2Zz4K"
-              alt=""
-            />
-          </div>
-          <div>
-            <Link to={"/employeetimetracking"}>
-              <p className={style.product_h1}>Employee time tracking </p>
-            </Link>
-            <p className={style.product_h2}>
-              Loved by teams and team leads. Error-free timesheet data and ease
-              of use
-            </p>
-          </div>
-        </div>
-      </div>
 
-      <div className={style.product_main2}>
-        <div className={style.product_sub1}>
+
+       {/* Billing */}
+       <div className={style.leftin}>
           <div>
             {" "}
             <img
@@ -56,9 +46,10 @@ const product = () => {
               alt=""
             />{" "}
           </div>
-          <div>
+          <div className={style.bill}>
             <Link to={"/billings"}>
-              <p className={style.product_h1}> Billing and invoicing</p>
+              <p className={style.heading}> 
+              <b>Billing and invoicing</b></p>
             </Link>
             <p className={style.product_h2}>
               Capture every billable minute so you can invoice with ease and
@@ -66,25 +57,11 @@ const product = () => {
             </p>
           </div>
         </div>
-        <div className={style.product_sub2}>
-          <div>
-            <img
-              className={style.product_img1}
-              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTMiIGhlaWdodD0iNTMiIHZpZXdCb3g9IjAgMCA1MyA1MyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeT0iMy4xNzk2OSIgd2lkdGg9IjUzIiBoZWlnaHQ9IjQ5LjgyIiByeD0iMy4wOTQ4OSIgZmlsbD0iI0Y1Q0JFRiIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgNi4xOTA1OUMwIDQuNDgxMzMgMS4zODU2MyAzLjA5NTcgMy4wOTQ4OSAzLjA5NTdINDkuOTA1MUM1MS42MTQ0IDMuMDk1NyA1MyA0LjQ4MTMzIDUzIDYuMTkwNTlWMTUuMDg4NEgwVjYuMTkwNTlaTTEzLjU0IDkuMjg1NzRDMTMuNTQgMTEuMjA4NyAxMS45ODExIDEyLjc2NzUgMTAuMDU4MiAxMi43Njc1QzguMTM1MjkgMTIuNzY3NSA2LjU3NjQ2IDExLjIwODcgNi41NzY0NiA5LjI4NTc0QzYuNTc2NDYgNy4zNjI4MiA4LjEzNTI5IDUuODAzOTggMTAuMDU4MiA1LjgwMzk4QzExLjk4MTEgNS44MDM5OCAxMy41NCA3LjM2MjgyIDEzLjU0IDkuMjg1NzRaTTQyLjU1NDYgMTIuNzY3NUM0NC40Nzc1IDEyLjc2NzUgNDYuMDM2NCAxMS4yMDg3IDQ2LjAzNjQgOS4yODU3NEM0Ni4wMzY0IDcuMzYyODIgNDQuNDc3NSA1LjgwMzk4IDQyLjU1NDYgNS44MDM5OEM0MC42MzE3IDUuODAzOTggMzkuMDcyOSA3LjM2MjgyIDM5LjA3MjkgOS4yODU3NEMzOS4wNzI5IDExLjIwODcgNDAuNjMxNyAxMi43Njc1IDQyLjU1NDYgMTIuNzY3NVoiIGZpbGw9IiNFNTdDRDgiLz4KPHJlY3QgeD0iNy43MzczIiB3aWR0aD0iNC42NDIzNCIgaGVpZ2h0PSIxMi4zNzk2IiByeD0iMi4zMjExNyIgZmlsbD0iIzQxMkE0QyIvPgo8cmVjdCB4PSI0MC4yMzM2IiB3aWR0aD0iNC42NDIzNCIgaGVpZ2h0PSIxMi4zNzk2IiByeD0iMi4zMjExNyIgZmlsbD0iIzQxMkE0QyIvPgo8Y2lyY2xlIGN4PSI2LjMyNzg3IiBjeT0iMjcuNTI3MyIgcj0iMi4wODc4OCIgZmlsbD0iI0ZERTVEQyIvPgo8Y2lyY2xlIGN4PSIxMy4xNTM4IiBjeT0iMjcuNTI3MyIgcj0iMi4wODc4OCIgZmlsbD0iI0ZERTVEQyIvPgo8Y2lyY2xlIGN4PSIxOS45Nzk1IiBjeT0iMjcuNTI3MyIgcj0iMi4wODc4OCIgZmlsbD0iI0ZERTVEQyIvPgo8Y2lyY2xlIGN4PSIyNi44MDU0IiBjeT0iMjcuNTI3MyIgcj0iMi4wODc4OCIgZmlsbD0iI0ZERTVEQyIvPgo8Y2lyY2xlIGN4PSIzMy42MzExIiBjeT0iMjcuNTI3MyIgcj0iMi4wODc4OCIgZmlsbD0iI0ZERTVEQyIvPgo8Y2lyY2xlIGN4PSI0MC40NTciIGN5PSIyNy41MjczIiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjQ3LjI4MjciIGN5PSIyNy41MjczIiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjQwLjQ1NyIgY3k9IjIxLjE2OCIgcj0iMi4wODc4OCIgZmlsbD0iI0ZERTVEQyIvPgo8Y2lyY2xlIGN4PSI0Ny4yODI3IiBjeT0iMjEuMTY4IiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjYuMzI3ODciIGN5PSIzMy44ODc3IiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjEzLjE1MzgiIGN5PSIzMy44ODc3IiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjE5Ljk3OTUiIGN5PSIzMy44ODc3IiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjI2LjgwNTQiIGN5PSIzMy44ODc3IiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjMzLjYzMTEiIGN5PSIzMy44ODc3IiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjQwLjQ1NyIgY3k9IjMzLjg4NzciIHI9IjIuMDg3ODgiIGZpbGw9IiNGREU1REMiLz4KPGNpcmNsZSBjeD0iNDcuMjgyNyIgY3k9IjMzLjg4NzciIHI9IjIuMDg3ODgiIGZpbGw9IiNGREU1REMiLz4KPGNpcmNsZSBjeD0iNi4zMjc4NyIgY3k9IjQwLjI0OCIgcj0iMi4wODc4OCIgZmlsbD0iI0ZERTVEQyIvPgo8Y2lyY2xlIGN4PSIxMy4xNTM4IiBjeT0iNDAuMjQ4IiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjE5Ljk3OTUiIGN5PSI0MC4yNDgiIHI9IjIuMDg3ODgiIGZpbGw9IiNGREU1REMiLz4KPGNpcmNsZSBjeD0iMjYuODA1NCIgY3k9IjQwLjI0OCIgcj0iMi4wODc4OCIgZmlsbD0iI0ZERTVEQyIvPgo8Y2lyY2xlIGN4PSIzMy42MzExIiBjeT0iNDAuMjQ4IiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjQwLjQ1NyIgY3k9IjQwLjI0OCIgcj0iMi4wODc4OCIgZmlsbD0iI0ZERTVEQyIvPgo8Y2lyY2xlIGN4PSI0Ny4yODI3IiBjeT0iNDAuMjQ4IiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjYuMzI3ODciIGN5PSI0Ni42MDg0IiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjEzLjE1MzgiIGN5PSI0Ni42MDg0IiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjE5Ljk3OTUiIGN5PSI0Ni42MDg0IiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjI2LjgwNTQiIGN5PSI0Ni42MDg0IiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxwYXRoIGQ9Ik00Mi43OTIyIDQxLjIxOTdDNDIuNjQxOCA0MS4xMjQ0IDQyLjQ2MDIgNDEuMDkxNCA0Mi4yODYgNDEuMTI3N0M0Mi4xMTE3IDQxLjE2NCA0MS45NTg0IDQxLjI2NjcgNDEuODU4NSA0MS40MTQyQzQxLjQzNTkgNDIuMDYwOSA0MC44NTkxIDQyLjU5MjEgNDAuMTgwMiA0Mi45NTk3QzM5LjUwMTMgNDMuMzI3MyAzOC43NDE2IDQzLjUxOTggMzcuOTY5OCA0My41MTk4QzM3LjE5OCA0My41MTk4IDM2LjQzODQgNDMuMzI3MyAzNS43NTk0IDQyLjk1OTdDMzUuMDgwNSA0Mi41OTIxIDM0LjUwMzggNDIuMDYwOSAzNC4wODEyIDQxLjQxNDJDMzMuOTgwOCA0MS4yNjk5IDMzLjgyODIgNDEuMTcwNSAzMy42NTU4IDQxLjEzNzFDMzMuNDgzMyA0MS4xMDM4IDMzLjMwNDcgNDEuMTM5IDMzLjE1NzggNDEuMjM1NEMzMy4wMTA5IDQxLjMzMTggMzIuOTA3NCA0MS40ODE4IDMyLjg2OTIgNDEuNjUzNEMzMi44MzEgNDEuODI1MSAzMi44NjExIDQyLjAwNDkgMzIuOTUzMiA0Mi4xNTQ2QzMzLjQ5NzcgNDIuOTg5OCAzNC4yNDE1IDQzLjY3NTkgMzUuMTE3NSA0NC4xNTA4QzM1Ljk5MzQgNDQuNjI1NyAzNi45NzM4IDQ0Ljg3NDQgMzcuOTY5OCA0NC44NzQ0QzM4Ljk2NTkgNDQuODc0NCAzOS45NDYzIDQ0LjYyNTcgNDAuODIyMiA0NC4xNTA4QzQxLjY5ODEgNDMuNjc1OSA0Mi40NDIgNDIuOTg5OCA0Mi45ODY0IDQyLjE1NDZDNDMuMDg0NCA0Mi4wMDQ4IDQzLjExOSA0MS44MjIyIDQzLjA4MjYgNDEuNjQ2OUM0My4wNDYxIDQxLjQ3MTUgNDIuOTQxNyA0MS4zMTc5IDQyLjc5MjIgNDEuMjE5N1oiIGZpbGw9IiM1NDQ2NUUiLz4KPHBhdGggZD0iTTQxLjY4MDMgMjkuNTcyN0M0MS41OTA5IDI5LjUxOTggNDEuNTEzNiAyOS40NDg2IDQxLjQ1MzUgMjkuMzYzOEM0MS4zOTM0IDI5LjI3OSA0MS4zNTE4IDI5LjE4MjUgNDEuMzMxNSAyOS4wODA1QzQxLjMxMTEgMjguOTc4NiA0MS4zMTI0IDI4Ljg3MzQgNDEuMzM1MyAyOC43NzJDNDEuMzU4MiAyOC42NzA2IDQxLjQwMjIgMjguNTc1MSA0MS40NjQ0IDI4LjQ5MTlMNDEuNTI5MiAyOC40MTA4TDQxLjU1NjIgMjguMzc4NEw0MS42MzcxIDI4LjI4MTFDNDEuODk5NiAyNy45NDk5IDQyLjExOTEgMjcuNTg2OCA0Mi4yOTAyIDI3LjIwMDJDNDIuNTYzOCAyNi41NjU0IDQyLjcwNTIgMjUuODgxMyA0Mi43MDU3IDI1LjE4OThDNDIuNzA2NiAyNC43MzExIDQyLjY0MyAyNC4yNzQ0IDQyLjUxNjkgMjMuODMzNEM0Mi4zMjg4IDIzLjE2NjEgNDIuMDA2MSAyMi41NDQ1IDQxLjU2ODYgMjIuMDA3QzQxLjEzMTEgMjEuNDY5NiA0MC41ODgxIDIxLjAyNzcgMzkuOTczMyAyMC43MDg4QzM5LjM1ODUgMjAuMzg5OCAzOC42ODQ4IDIwLjIwMDYgMzcuOTk0IDIwLjE1MjdDMzcuMzAzMiAyMC4xMDQ5IDM2LjYxIDIwLjE5OTQgMzUuOTU3MSAyMC40MzA1QzM1LjMwNDMgMjAuNjYxNiAzNC43MDU3IDIxLjAyNDQgMzQuMTk4NSAyMS40OTY0QzMzLjY5MTIgMjEuOTY4NCAzMy4yODYgMjIuNTM5NSAzMy4wMDggMjMuMTc0NkMzMi43MyAyMy44MDk2IDMyLjU4NTEgMjQuNDk1IDMyLjU4MjEgMjUuMTg4M0MzMi41NzkyIDI1Ljg4MTcgMzIuNzE4MyAyNi41NjgzIDMyLjk5MDkgMjcuMjA1NkMzMy4xNjY1IDI3LjYwMjIgMzMuMzg5NCAyNy45NzYgMzMuNjU0OCAyOC4zMTg5TDMzLjY4NzIgMjguMzU2OEwzMy44MDA1IDI4LjUxMzVDMzMuODYyIDI4LjU5NzggMzMuOTA1MSAyOC42OTQxIDMzLjkyNjggMjguNzk2M0MzMy45NDg1IDI4Ljg5ODQgMzMuOTQ4NCAyOS4wMDM5IDMzLjkyNjUgMjkuMTA2QzMzLjkwNDUgMjkuMjA4MSAzMy44NjEzIDI5LjMwNDQgMzMuNzk5NiAyOS4zODg1QzMzLjczNzkgMjkuNDcyNyAzMy42NTkxIDI5LjU0MjggMzMuNTY4NCAyOS41OTQzTDMzLjI1IDI5Ljc3ODFDMzEuOTg2MiAzMC4zOTM3IDMwLjg2NDcgMzEuMjY2OSAyOS45NTc2IDMyLjM0MThDMjkuMDUwNSAzMy40MTY3IDI4LjM3NzcgMzQuNjY5NiAyNy45ODI0IDM2LjAyQzI4LjQ0MTYgMzYuMDg4OSAyOC45MDUyIDM2LjEyNSAyOS4zNjk1IDM2LjEyODFDMzEuMTU1NiAzNi4xMjY5IDMyLjkxMzUgMzUuNjgxOSAzNC40ODU2IDM0LjgzMzFDMzYuMDU3NyAzMy45ODQyIDM3LjM5NDkgMzIuNzU3OSAzOC4zNzczIDMxLjI2NDNDMzkuMjgxOCAzMi44MDQ3IDQwLjU3MiAzNC4wODIxIDQyLjEyMDYgMzQuOTcwMkM0My42NjkyIDM1Ljg1ODMgNDUuNDIyNCAzNi4zMjYzIDQ3LjIwNjkgMzYuMzI4MUg0Ny4zOTA0QzQ3LjAxMjUgMzQuODQyMiA0Ni4zMDE5IDMzLjQ2MiA0NS4zMTI3IDMyLjI5MTZDNDQuMzIzNCAzMS4xMjEzIDQzLjA4MTMgMzAuMTkxNSA0MS42ODAzIDI5LjU3MjdaIiBmaWxsPSIjNjgzNzJFIi8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNDcuMTkxNSAzNi4yNjdINDcuMzc1QzQ3LjU4NDUgMzcuMDk1NCA0Ny42ODc5IDM3Ljk0NzEgNDcuNjgyNiAzOC44MDE2QzQ3LjY4NTMgMzguODQ0OCA0Ny42ODUzIDM4Ljg4ODEgNDcuNjgyNiAzOC45MzEzQzQ3LjY0NTggNDEuNTc2NSA0Ni41Njk2IDQ0LjEwMDYgNDQuNjg3MiA0NS45NTY5TDQzLjMzNzkgNDcuMzA3OUM0Mi44ODE3IDQ3Ljc3MDYgNDIuNTcxIDQ4LjM1NzEgNDIuNDQ0MyA0OC45OTQ5QzQyLjMxNzcgNDkuNjMyNiA0Mi4zODA2IDUwLjI5MzUgNDIuNjI1MyA1MC44OTU4QzQyLjg3IDUxLjQ5ODEgNDMuMjg1OCA1Mi4wMTUyIDQzLjgyMTEgNTIuMzgzMkM0NC4xODkgNTIuNjM2MSA0NC42MDIzIDUyLjgxMSA0NS4wMzU1IDUyLjg5OTZIMzAuMTE1QzMyLjY4MzMgNTIuNTI3MSAzMy44MzU2IDQ5LjIwMTQgMzEuOTAxNSA0Ny4yNjQ3TDMwLjU1NzYgNDUuOTE5QzI5LjYwNzEgNDQuOTgzMiAyOC44NTI2IDQzLjg2NjkgMjguMzM4MyA0Mi42MzU1QzI3LjgyMzkgNDEuNDA0MSAyNy41NjAxIDQwLjA4MjMgMjcuNTYyMiAzOC43NDc2QzI3LjU1OTQgMzguNzAyNiAyNy41NTk0IDM4LjY1NzUgMjcuNTYyMiAzOC42MTI1QzI3LjU3NzQgMzcuNzEwMiAyNy43MTM2IDM2LjgxNDEgMjcuOTY3IDM1Ljk0ODJDMjguNDI2MiAzNi4wMTcgMjguODg5NyAzNi4wNTMxIDI5LjM1NCAzNi4wNTYyQzMxLjE0MDEgMzYuMDU1IDMyLjg5OCAzNS42MTAxIDM0LjQ3MDEgMzQuNzYxMkMzNi4wNDIzIDMzLjkxMjMgMzcuMzc5NCAzMi42ODYxIDM4LjM2MTggMzEuMTkyNEMzOS4yNjQ5IDMyLjczNDggNDAuNTU0NiAzNC4wMTQzIDQyLjEwMzMgMzQuOTA0NEM0My42NTE5IDM1Ljc5NDQgNDUuNDA1OSAzNi4yNjQxIDQ3LjE5MTUgMzYuMjY3Wk00MC44MjI5IDQ0LjE0ODVDNDEuNjk4OCA0My42NzM2IDQyLjQ0MjcgNDIuOTg3NSA0Mi45ODcxIDQyLjE1MjNDNDMuMDg1MSA0Mi4wMDI1IDQzLjExOTcgNDEuODE5OCA0My4wODMyIDQxLjY0NDVDNDMuMDQ2OCA0MS40NjkyIDQyLjk0MjMgNDEuMzE1NiA0Mi43OTI4IDQxLjIxNzNDNDIuNjQyNCA0MS4xMjIgNDIuNDYwOSA0MS4wODkgNDIuMjg2NiA0MS4xMjUzQzQyLjExMjQgNDEuMTYxNiA0MS45NTkxIDQxLjI2NDQgNDEuODU5MSA0MS40MTE5QzQxLjQzNjYgNDIuMDU4NiA0MC44NTk4IDQyLjU4OTggNDAuMTgwOSA0Mi45NTc0QzM5LjUwMiA0My4zMjUgMzguNzQyMyA0My41MTc1IDM3Ljk3MDUgNDMuNTE3NUMzNy4xOTg3IDQzLjUxNzUgMzYuNDM5IDQzLjMyNSAzNS43NjAxIDQyLjk1NzRDMzUuMDgxMiA0Mi41ODk4IDM0LjUwNDQgNDIuMDU4NiAzNC4wODE5IDQxLjQxMTlDMzMuOTgxNSA0MS4yNjc2IDMzLjgyODkgNDEuMTY4MiAzMy42NTY0IDQxLjEzNDhDMzMuNDg0IDQxLjEwMTQgMzMuMzA1NCA0MS4xMzY3IDMzLjE1ODUgNDEuMjMzMUMzMy4wMTE2IDQxLjMyOTUgMzIuOTA4MSA0MS40Nzk0IDMyLjg2OTkgNDEuNjUxMUMzMi44MzE3IDQxLjgyMjcgMzIuODYxOCA0Mi4wMDI1IDMyLjk1MzkgNDIuMTUyM0MzMy40OTg0IDQyLjk4NzUgMzQuMjQyMiA0My42NzM2IDM1LjExODEgNDQuMTQ4NUMzNS45OTQxIDQ0LjYyMzMgMzYuOTc0NCA0NC44NzIgMzcuOTcwNSA0NC44NzJDMzguOTY2NiA0NC44NzIgMzkuOTQ2OSA0NC42MjMzIDQwLjgyMjkgNDQuMTQ4NVoiIGZpbGw9IiNDRDk0NjAiLz4KPC9zdmc+Cg=="
-              alt=""
-            />
-          </div>
-          <div>
-            <p className={style.product_h1}>Payroll </p>
-            <p className={style.product_h2}>
-              Calculate payroll for contractor and employees based on accurate
-              data{" "}
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className={style.product_main2}>
-        <div className={style.product_sub1}>
+
+       
+       {/* Reporting */}
+
+         <div className={style.leftin}>
           <div>
             {" "}
             <img
@@ -93,8 +70,10 @@ const product = () => {
               alt=""
             />
           </div>
-          <div>
-            <p className={style.product_h1}> Reporting and transparency </p>
+          <div className={style.report}>
+            <p className={style.heading}>
+               <b> Reporting and transparency </b>
+           </p>
             <p className={style.product_h2}>
               {" "}
               Get a big picture overview or dig into details with insightful
@@ -102,7 +81,50 @@ const product = () => {
             </p>
           </div>
         </div>
-        <div className={style.product_sub2}>
+
+       </div>
+
+
+       <div style={{border:"1px solid black"}}>  
+        <div className={style.leftin}>
+          <div>
+            <img
+              className={style.product_img1}
+              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTMiIGhlaWdodD0iNTMiIHZpZXdCb3g9IjAgMCA1MyA1MyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGVsbGlwc2UgY3g9IjI2LjQwNzMiIGN5PSIzMS43NTQzIiByeD0iMTkuMzM1MyIgcnk9IjIxLjI0NTUiIGZpbGw9IiNGRUZCRkEiLz4KPHBhdGggZD0iTTE4LjQ4MjQgMzkuNDE4NkMyMC43MDEyIDQzLjI0OTcgMjguOTQyNSA0OC4xMjU4IDM1LjI4MiAzOS4wNzAzIiBzdHJva2U9IiNGMkJERUMiIHN0cm9rZS13aWR0aD0iMS43NTIxOSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxlbGxpcHNlIGN4PSIyNi40MDczIiBjeT0iMzEuNzU0MyIgcng9IjE5LjMzNTMiIHJ5PSIyMS4yNDU1IiBmaWxsPSIjRkVGQkZBIi8+CjxwYXRoIGQ9Ik0xOC40ODI0IDM5LjQxODZDMjAuNzAxMiA0My4yNDk3IDI4Ljk0MjUgNDguMTI1OCAzNS4yODIgMzkuMDcwMyIgc3Ryb2tlPSIjRjJCREVDIiBzdHJva2Utd2lkdGg9IjEuNzUyMTkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8ZWxsaXBzZSBjeD0iMjYuNDA3MyIgY3k9IjMxLjc1NDMiIHJ4PSIxOS4zMzUzIiByeT0iMjEuMjQ1NSIgZmlsbD0iI0ZFRkJGQSIvPgo8cGF0aCBkPSJNMTguNDgyNCAzOS40MTg2QzIwLjcwMTIgNDMuMjQ5NyAyOC45NDI1IDQ4LjEyNTggMzUuMjgyIDM5LjA3MDMiIHN0cm9rZT0iI0YyQkRFQyIgc3Ryb2tlLXdpZHRoPSIxLjc1MjE5IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPHBhdGggZD0iTTEyLjA2ODggMzAuOTc3MkM3LjIxNDk5IDMyLjE2MjQgNy4xMzI2MyAzNS4wNjIyIDcuNTMzNjYgMzYuNTk0MkM4LjM2OTQyIDM4LjA5NjkgNy44MjQ0NiAzNy43MDUxIDcuNTMzNjYgMzYuNTk0MkM2LjkzMjc4IDM1LjUxMzkgNS42MTgxOSAzMy40NTQzIDIuOTgyMjggMjkuOTc4N0MtMTEuMDUwMiAxMS40NzYxIDI4LjU3NiAtMC42Mzk1MDIgMzYuMTQ4MSAwLjAyNjExMTZDNDYuMTQzMyAwLjAyNjExMTYgNjEuNTkwNSAxMS42MDc5IDQ3LjA1MiAyMy45ODgzQzMyLjUxMzUgMzYuMzY4NyAzNi4xNDgxIDIwLjk5MjkgMjkuMzMzMiAyMC45OTI5QzI5LjMzMzIgMjAuOTkyOSA2LjYxNjg2IDE2LjIwMDUgMTIuMDY4OCAzMC45NzcyWiIgZmlsbD0iI0U1N0NEOCIvPgo8L3N2Zz4K"
+              alt=""
+            />
+          </div>
+          <div className={style.emp}>
+            <Link to={"/employeetimetracking"}>
+              <p className={style.heading}>
+                <b>Employee time tracking </b></p>
+            </Link>
+            <p className={style.product_h2}>
+              Loved by teams and team leads. Error-free timesheet data and ease
+              of use
+            </p>
+          </div>
+        </div>
+
+        <div className={style.leftin}>
+          <div>
+            <img
+              className={style.product_img1}
+              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTMiIGhlaWdodD0iNTMiIHZpZXdCb3g9IjAgMCA1MyA1MyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeT0iMy4xNzk2OSIgd2lkdGg9IjUzIiBoZWlnaHQ9IjQ5LjgyIiByeD0iMy4wOTQ4OSIgZmlsbD0iI0Y1Q0JFRiIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgNi4xOTA1OUMwIDQuNDgxMzMgMS4zODU2MyAzLjA5NTcgMy4wOTQ4OSAzLjA5NTdINDkuOTA1MUM1MS42MTQ0IDMuMDk1NyA1MyA0LjQ4MTMzIDUzIDYuMTkwNTlWMTUuMDg4NEgwVjYuMTkwNTlaTTEzLjU0IDkuMjg1NzRDMTMuNTQgMTEuMjA4NyAxMS45ODExIDEyLjc2NzUgMTAuMDU4MiAxMi43Njc1QzguMTM1MjkgMTIuNzY3NSA2LjU3NjQ2IDExLjIwODcgNi41NzY0NiA5LjI4NTc0QzYuNTc2NDYgNy4zNjI4MiA4LjEzNTI5IDUuODAzOTggMTAuMDU4MiA1LjgwMzk4QzExLjk4MTEgNS44MDM5OCAxMy41NCA3LjM2MjgyIDEzLjU0IDkuMjg1NzRaTTQyLjU1NDYgMTIuNzY3NUM0NC40Nzc1IDEyLjc2NzUgNDYuMDM2NCAxMS4yMDg3IDQ2LjAzNjQgOS4yODU3NEM0Ni4wMzY0IDcuMzYyODIgNDQuNDc3NSA1LjgwMzk4IDQyLjU1NDYgNS44MDM5OEM0MC42MzE3IDUuODAzOTggMzkuMDcyOSA3LjM2MjgyIDM5LjA3MjkgOS4yODU3NEMzOS4wNzI5IDExLjIwODcgNDAuNjMxNyAxMi43Njc1IDQyLjU1NDYgMTIuNzY3NVoiIGZpbGw9IiNFNTdDRDgiLz4KPHJlY3QgeD0iNy43MzczIiB3aWR0aD0iNC42NDIzNCIgaGVpZ2h0PSIxMi4zNzk2IiByeD0iMi4zMjExNyIgZmlsbD0iIzQxMkE0QyIvPgo8cmVjdCB4PSI0MC4yMzM2IiB3aWR0aD0iNC42NDIzNCIgaGVpZ2h0PSIxMi4zNzk2IiByeD0iMi4zMjExNyIgZmlsbD0iIzQxMkE0QyIvPgo8Y2lyY2xlIGN4PSI2LjMyNzg3IiBjeT0iMjcuNTI3MyIgcj0iMi4wODc4OCIgZmlsbD0iI0ZERTVEQyIvPgo8Y2lyY2xlIGN4PSIxMy4xNTM4IiBjeT0iMjcuNTI3MyIgcj0iMi4wODc4OCIgZmlsbD0iI0ZERTVEQyIvPgo8Y2lyY2xlIGN4PSIxOS45Nzk1IiBjeT0iMjcuNTI3MyIgcj0iMi4wODc4OCIgZmlsbD0iI0ZERTVEQyIvPgo8Y2lyY2xlIGN4PSIyNi44MDU0IiBjeT0iMjcuNTI3MyIgcj0iMi4wODc4OCIgZmlsbD0iI0ZERTVEQyIvPgo8Y2lyY2xlIGN4PSIzMy42MzExIiBjeT0iMjcuNTI3MyIgcj0iMi4wODc4OCIgZmlsbD0iI0ZERTVEQyIvPgo8Y2lyY2xlIGN4PSI0MC40NTciIGN5PSIyNy41MjczIiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjQ3LjI4MjciIGN5PSIyNy41MjczIiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjQwLjQ1NyIgY3k9IjIxLjE2OCIgcj0iMi4wODc4OCIgZmlsbD0iI0ZERTVEQyIvPgo8Y2lyY2xlIGN4PSI0Ny4yODI3IiBjeT0iMjEuMTY4IiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjYuMzI3ODciIGN5PSIzMy44ODc3IiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjEzLjE1MzgiIGN5PSIzMy44ODc3IiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjE5Ljk3OTUiIGN5PSIzMy44ODc3IiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjI2LjgwNTQiIGN5PSIzMy44ODc3IiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjMzLjYzMTEiIGN5PSIzMy44ODc3IiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjQwLjQ1NyIgY3k9IjMzLjg4NzciIHI9IjIuMDg3ODgiIGZpbGw9IiNGREU1REMiLz4KPGNpcmNsZSBjeD0iNDcuMjgyNyIgY3k9IjMzLjg4NzciIHI9IjIuMDg3ODgiIGZpbGw9IiNGREU1REMiLz4KPGNpcmNsZSBjeD0iNi4zMjc4NyIgY3k9IjQwLjI0OCIgcj0iMi4wODc4OCIgZmlsbD0iI0ZERTVEQyIvPgo8Y2lyY2xlIGN4PSIxMy4xNTM4IiBjeT0iNDAuMjQ4IiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjE5Ljk3OTUiIGN5PSI0MC4yNDgiIHI9IjIuMDg3ODgiIGZpbGw9IiNGREU1REMiLz4KPGNpcmNsZSBjeD0iMjYuODA1NCIgY3k9IjQwLjI0OCIgcj0iMi4wODc4OCIgZmlsbD0iI0ZERTVEQyIvPgo8Y2lyY2xlIGN4PSIzMy42MzExIiBjeT0iNDAuMjQ4IiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjQwLjQ1NyIgY3k9IjQwLjI0OCIgcj0iMi4wODc4OCIgZmlsbD0iI0ZERTVEQyIvPgo8Y2lyY2xlIGN4PSI0Ny4yODI3IiBjeT0iNDAuMjQ4IiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjYuMzI3ODciIGN5PSI0Ni42MDg0IiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjEzLjE1MzgiIGN5PSI0Ni42MDg0IiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjE5Ljk3OTUiIGN5PSI0Ni42MDg0IiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxjaXJjbGUgY3g9IjI2LjgwNTQiIGN5PSI0Ni42MDg0IiByPSIyLjA4Nzg4IiBmaWxsPSIjRkRFNURDIi8+CjxwYXRoIGQ9Ik00Mi43OTIyIDQxLjIxOTdDNDIuNjQxOCA0MS4xMjQ0IDQyLjQ2MDIgNDEuMDkxNCA0Mi4yODYgNDEuMTI3N0M0Mi4xMTE3IDQxLjE2NCA0MS45NTg0IDQxLjI2NjcgNDEuODU4NSA0MS40MTQyQzQxLjQzNTkgNDIuMDYwOSA0MC44NTkxIDQyLjU5MjEgNDAuMTgwMiA0Mi45NTk3QzM5LjUwMTMgNDMuMzI3MyAzOC43NDE2IDQzLjUxOTggMzcuOTY5OCA0My41MTk4QzM3LjE5OCA0My41MTk4IDM2LjQzODQgNDMuMzI3MyAzNS43NTk0IDQyLjk1OTdDMzUuMDgwNSA0Mi41OTIxIDM0LjUwMzggNDIuMDYwOSAzNC4wODEyIDQxLjQxNDJDMzMuOTgwOCA0MS4yNjk5IDMzLjgyODIgNDEuMTcwNSAzMy42NTU4IDQxLjEzNzFDMzMuNDgzMyA0MS4xMDM4IDMzLjMwNDcgNDEuMTM5IDMzLjE1NzggNDEuMjM1NEMzMy4wMTA5IDQxLjMzMTggMzIuOTA3NCA0MS40ODE4IDMyLjg2OTIgNDEuNjUzNEMzMi44MzEgNDEuODI1MSAzMi44NjExIDQyLjAwNDkgMzIuOTUzMiA0Mi4xNTQ2QzMzLjQ5NzcgNDIuOTg5OCAzNC4yNDE1IDQzLjY3NTkgMzUuMTE3NSA0NC4xNTA4QzM1Ljk5MzQgNDQuNjI1NyAzNi45NzM4IDQ0Ljg3NDQgMzcuOTY5OCA0NC44NzQ0QzM4Ljk2NTkgNDQuODc0NCAzOS45NDYzIDQ0LjYyNTcgNDAuODIyMiA0NC4xNTA4QzQxLjY5ODEgNDMuNjc1OSA0Mi40NDIgNDIuOTg5OCA0Mi45ODY0IDQyLjE1NDZDNDMuMDg0NCA0Mi4wMDQ4IDQzLjExOSA0MS44MjIyIDQzLjA4MjYgNDEuNjQ2OUM0My4wNDYxIDQxLjQ3MTUgNDIuOTQxNyA0MS4zMTc5IDQyLjc5MjIgNDEuMjE5N1oiIGZpbGw9IiM1NDQ2NUUiLz4KPHBhdGggZD0iTTQxLjY4MDMgMjkuNTcyN0M0MS41OTA5IDI5LjUxOTggNDEuNTEzNiAyOS40NDg2IDQxLjQ1MzUgMjkuMzYzOEM0MS4zOTM0IDI5LjI3OSA0MS4zNTE4IDI5LjE4MjUgNDEuMzMxNSAyOS4wODA1QzQxLjMxMTEgMjguOTc4NiA0MS4zMTI0IDI4Ljg3MzQgNDEuMzM1MyAyOC43NzJDNDEuMzU4MiAyOC42NzA2IDQxLjQwMjIgMjguNTc1MSA0MS40NjQ0IDI4LjQ5MTlMNDEuNTI5MiAyOC40MTA4TDQxLjU1NjIgMjguMzc4NEw0MS42MzcxIDI4LjI4MTFDNDEuODk5NiAyNy45NDk5IDQyLjExOTEgMjcuNTg2OCA0Mi4yOTAyIDI3LjIwMDJDNDIuNTYzOCAyNi41NjU0IDQyLjcwNTIgMjUuODgxMyA0Mi43MDU3IDI1LjE4OThDNDIuNzA2NiAyNC43MzExIDQyLjY0MyAyNC4yNzQ0IDQyLjUxNjkgMjMuODMzNEM0Mi4zMjg4IDIzLjE2NjEgNDIuMDA2MSAyMi41NDQ1IDQxLjU2ODYgMjIuMDA3QzQxLjEzMTEgMjEuNDY5NiA0MC41ODgxIDIxLjAyNzcgMzkuOTczMyAyMC43MDg4QzM5LjM1ODUgMjAuMzg5OCAzOC42ODQ4IDIwLjIwMDYgMzcuOTk0IDIwLjE1MjdDMzcuMzAzMiAyMC4xMDQ5IDM2LjYxIDIwLjE5OTQgMzUuOTU3MSAyMC40MzA1QzM1LjMwNDMgMjAuNjYxNiAzNC43MDU3IDIxLjAyNDQgMzQuMTk4NSAyMS40OTY0QzMzLjY5MTIgMjEuOTY4NCAzMy4yODYgMjIuNTM5NSAzMy4wMDggMjMuMTc0NkMzMi43MyAyMy44MDk2IDMyLjU4NTEgMjQuNDk1IDMyLjU4MjEgMjUuMTg4M0MzMi41NzkyIDI1Ljg4MTcgMzIuNzE4MyAyNi41NjgzIDMyLjk5MDkgMjcuMjA1NkMzMy4xNjY1IDI3LjYwMjIgMzMuMzg5NCAyNy45NzYgMzMuNjU0OCAyOC4zMTg5TDMzLjY4NzIgMjguMzU2OEwzMy44MDA1IDI4LjUxMzVDMzMuODYyIDI4LjU5NzggMzMuOTA1MSAyOC42OTQxIDMzLjkyNjggMjguNzk2M0MzMy45NDg1IDI4Ljg5ODQgMzMuOTQ4NCAyOS4wMDM5IDMzLjkyNjUgMjkuMTA2QzMzLjkwNDUgMjkuMjA4MSAzMy44NjEzIDI5LjMwNDQgMzMuNzk5NiAyOS4zODg1QzMzLjczNzkgMjkuNDcyNyAzMy42NTkxIDI5LjU0MjggMzMuNTY4NCAyOS41OTQzTDMzLjI1IDI5Ljc3ODFDMzEuOTg2MiAzMC4zOTM3IDMwLjg2NDcgMzEuMjY2OSAyOS45NTc2IDMyLjM0MThDMjkuMDUwNSAzMy40MTY3IDI4LjM3NzcgMzQuNjY5NiAyNy45ODI0IDM2LjAyQzI4LjQ0MTYgMzYuMDg4OSAyOC45MDUyIDM2LjEyNSAyOS4zNjk1IDM2LjEyODFDMzEuMTU1NiAzNi4xMjY5IDMyLjkxMzUgMzUuNjgxOSAzNC40ODU2IDM0LjgzMzFDMzYuMDU3NyAzMy45ODQyIDM3LjM5NDkgMzIuNzU3OSAzOC4zNzczIDMxLjI2NDNDMzkuMjgxOCAzMi44MDQ3IDQwLjU3MiAzNC4wODIxIDQyLjEyMDYgMzQuOTcwMkM0My42NjkyIDM1Ljg1ODMgNDUuNDIyNCAzNi4zMjYzIDQ3LjIwNjkgMzYuMzI4MUg0Ny4zOTA0QzQ3LjAxMjUgMzQuODQyMiA0Ni4zMDE5IDMzLjQ2MiA0NS4zMTI3IDMyLjI5MTZDNDQuMzIzNCAzMS4xMjEzIDQzLjA4MTMgMzAuMTkxNSA0MS42ODAzIDI5LjU3MjdaIiBmaWxsPSIjNjgzNzJFIi8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNDcuMTkxNSAzNi4yNjdINDcuMzc1QzQ3LjU4NDUgMzcuMDk1NCA0Ny42ODc5IDM3Ljk0NzEgNDcuNjgyNiAzOC44MDE2QzQ3LjY4NTMgMzguODQ0OCA0Ny42ODUzIDM4Ljg4ODEgNDcuNjgyNiAzOC45MzEzQzQ3LjY0NTggNDEuNTc2NSA0Ni41Njk2IDQ0LjEwMDYgNDQuNjg3MiA0NS45NTY5TDQzLjMzNzkgNDcuMzA3OUM0Mi44ODE3IDQ3Ljc3MDYgNDIuNTcxIDQ4LjM1NzEgNDIuNDQ0MyA0OC45OTQ5QzQyLjMxNzcgNDkuNjMyNiA0Mi4zODA2IDUwLjI5MzUgNDIuNjI1MyA1MC44OTU4QzQyLjg3IDUxLjQ5ODEgNDMuMjg1OCA1Mi4wMTUyIDQzLjgyMTEgNTIuMzgzMkM0NC4xODkgNTIuNjM2MSA0NC42MDIzIDUyLjgxMSA0NS4wMzU1IDUyLjg5OTZIMzAuMTE1QzMyLjY4MzMgNTIuNTI3MSAzMy44MzU2IDQ5LjIwMTQgMzEuOTAxNSA0Ny4yNjQ3TDMwLjU1NzYgNDUuOTE5QzI5LjYwNzEgNDQuOTgzMiAyOC44NTI2IDQzLjg2NjkgMjguMzM4MyA0Mi42MzU1QzI3LjgyMzkgNDEuNDA0MSAyNy41NjAxIDQwLjA4MjMgMjcuNTYyMiAzOC43NDc2QzI3LjU1OTQgMzguNzAyNiAyNy41NTk0IDM4LjY1NzUgMjcuNTYyMiAzOC42MTI1QzI3LjU3NzQgMzcuNzEwMiAyNy43MTM2IDM2LjgxNDEgMjcuOTY3IDM1Ljk0ODJDMjguNDI2MiAzNi4wMTcgMjguODg5NyAzNi4wNTMxIDI5LjM1NCAzNi4wNTYyQzMxLjE0MDEgMzYuMDU1IDMyLjg5OCAzNS42MTAxIDM0LjQ3MDEgMzQuNzYxMkMzNi4wNDIzIDMzLjkxMjMgMzcuMzc5NCAzMi42ODYxIDM4LjM2MTggMzEuMTkyNEMzOS4yNjQ5IDMyLjczNDggNDAuNTU0NiAzNC4wMTQzIDQyLjEwMzMgMzQuOTA0NEM0My42NTE5IDM1Ljc5NDQgNDUuNDA1OSAzNi4yNjQxIDQ3LjE5MTUgMzYuMjY3Wk00MC44MjI5IDQ0LjE0ODVDNDEuNjk4OCA0My42NzM2IDQyLjQ0MjcgNDIuOTg3NSA0Mi45ODcxIDQyLjE1MjNDNDMuMDg1MSA0Mi4wMDI1IDQzLjExOTcgNDEuODE5OCA0My4wODMyIDQxLjY0NDVDNDMuMDQ2OCA0MS40NjkyIDQyLjk0MjMgNDEuMzE1NiA0Mi43OTI4IDQxLjIxNzNDNDIuNjQyNCA0MS4xMjIgNDIuNDYwOSA0MS4wODkgNDIuMjg2NiA0MS4xMjUzQzQyLjExMjQgNDEuMTYxNiA0MS45NTkxIDQxLjI2NDQgNDEuODU5MSA0MS40MTE5QzQxLjQzNjYgNDIuMDU4NiA0MC44NTk4IDQyLjU4OTggNDAuMTgwOSA0Mi45NTc0QzM5LjUwMiA0My4zMjUgMzguNzQyMyA0My41MTc1IDM3Ljk3MDUgNDMuNTE3NUMzNy4xOTg3IDQzLjUxNzUgMzYuNDM5IDQzLjMyNSAzNS43NjAxIDQyLjk1NzRDMzUuMDgxMiA0Mi41ODk4IDM0LjUwNDQgNDIuMDU4NiAzNC4wODE5IDQxLjQxMTlDMzMuOTgxNSA0MS4yNjc2IDMzLjgyODkgNDEuMTY4MiAzMy42NTY0IDQxLjEzNDhDMzMuNDg0IDQxLjEwMTQgMzMuMzA1NCA0MS4xMzY3IDMzLjE1ODUgNDEuMjMzMUMzMy4wMTE2IDQxLjMyOTUgMzIuOTA4MSA0MS40Nzk0IDMyLjg2OTkgNDEuNjUxMUMzMi44MzE3IDQxLjgyMjcgMzIuODYxOCA0Mi4wMDI1IDMyLjk1MzkgNDIuMTUyM0MzMy40OTg0IDQyLjk4NzUgMzQuMjQyMiA0My42NzM2IDM1LjExODEgNDQuMTQ4NUMzNS45OTQxIDQ0LjYyMzMgMzYuOTc0NCA0NC44NzIgMzcuOTcwNSA0NC44NzJDMzguOTY2NiA0NC44NzIgMzkuOTQ2OSA0NC42MjMzIDQwLjgyMjkgNDQuMTQ4NVoiIGZpbGw9IiNDRDk0NjAiLz4KPC9zdmc+Cg=="
+              alt=""
+            />
+          </div>
+          <div className={style.pay}>
+            <p className={style.heading}>
+              <b>Payroll</b> </p>
+            <p className={style.product_h2}>
+              Calculate payroll for contractor and employees based on accurate
+              data{" "}
+            </p>
+          </div>
+        </div>
+
+        <div className={style.leftin}>
           <div>
             <img
               className={style.product_img1}
@@ -110,8 +132,10 @@ const product = () => {
               alt=""
             />
           </div>
-          <div>
-            <p className={style.product_h1}>project budgeting</p>
+          <div className={style.pro}>
+            <p className={style.heading}>
+              <b>project budgeting</b>
+            </p>
             <p className={style.product_h2}>
               {" "}
               Stay on track with budgets and deadline. Eliminate scope creep and
@@ -119,17 +143,30 @@ const product = () => {
             </p>
           </div>
         </div>
+        </div>
       </div>
+      <div style={{marginTop:"1.5rem"}}>
       <div className={style.product_box}>
-        <p>
-          ToggleTrack stands against Employee surveillance.Read our Statement
-          here{" "}
-        </p>
+        <div className={style.toggle}>
+        <b>ToggleTrack stands against Employee surveillance.Read our Statement
+          here{" "}</b>  
+        </div>
+        <div className={style.icon}> <ArrowForwardIcon style={{color:"#5f2a4c"}}/></div>
       </div>
 
-      <p> TRACK ANYWHERE YOU LIKE</p>
-      <div className={style.product_main2}>
-        <div className={style.product_sub1}>
+      </div>
+      </div>
+
+      {/* vertical line */}
+      <div className={style.line}>
+
+      </div>
+
+      <div className={style.rightbox} >
+
+         <p style={{color:"#817187"}}><b>TRACK ANYWHERE YOU LIKE</b></p>
+        {/* Web app */}
+         <div className={style.leftin}>
           <div>
             {" "}
             <img
@@ -138,15 +175,18 @@ const product = () => {
               alt=""
             />
           </div>
-          <div>
-            <p className={style.product_h1}> Web app </p>
+          <div className={style.web}>
+            <p className={style.heading}> 
+            <b>Web app </b></p>
             <p className={style.product_h2}>
               {" "}
               Full-suite app for time project and team management
             </p>
           </div>
         </div>
-        <div className={style.product_sub2}>
+
+  {/* Mobile apps */}
+        <div className={style.leftin}>
           <div>
             <img
               className={style.product_img1}
@@ -154,16 +194,18 @@ const product = () => {
               alt=""
             />
           </div>
-          <div>
-            <p className={style.product_h1}>Mobile apps</p>
+          <div className={style.mob}>
+            <p className={style.heading}>
+              <b>Mobile apps</b>
+            </p>
             <p className={style.product_h2}>
               Time tracking on the go with our iOS and Android apps
             </p>
           </div>
         </div>
-      </div>
-      <div className={style.product_main2}>
-        <div className={style.product_sub1}>
+
+{/* //Desktop */}
+         <div className={style.leftin}>
           <div>
             <img
               className={style.product_img1}
@@ -171,15 +213,17 @@ const product = () => {
               alt=""
             />
           </div>
-          <div>
-            <p className={style.product_h1}> Desktop App </p>
+          <div className={style.web}>
+            <p className={style.heading}> 
+            <b>Desktop App </b></p>
             <p className={style.product_h2}>
               {" "}
               Launch right from your Wimdow, Mac,or Linux machine{" "}
             </p>
           </div>
         </div>
-        <div className={style.product_sub2}>
+      {/* //Integration part */}
+      <div className={style.leftin}>
           <div>
             <img
               className={style.product_img1}
@@ -187,16 +231,24 @@ const product = () => {
               alt=""
             />
           </div>
-          <div>
-            <p className={style.product_h1}>100+ integration </p>
+          <div className={style.web}>
+            <p className={style.heading}>
+              <b>100+ integration </b>
+            </p>
             <p className={style.product_h2}>
               Explore our native integration or track time via browser
             </p>
           </div>
-        </div>
       </div>
-    </div>
+     
+      </div>   
+   </div> 
+
+    
+
+      
+ </div>
   );
 };
 
-export default product;
+export default Product;
