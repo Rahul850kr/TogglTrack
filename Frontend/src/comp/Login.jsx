@@ -2,7 +2,7 @@ import { Flex, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { loginAPI } from "../store/auth/auth.actions";
+// import { loginAPI } from "../store/auth/auth.actions";
 import "./Login.css";
 
 const Login = () => {
@@ -17,7 +17,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Submit");
-    dispatch(loginAPI(loginCreds));
+    // dispatch(loginAPI(loginCreds));
   };
   const hanldeChange = (e) => {
     const { name, value } = e.target;
