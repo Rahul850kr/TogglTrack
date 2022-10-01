@@ -17,8 +17,31 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const token = JSON.parse(localStorage.getItem("token"));
     // console.log("Submit");
+    // console.log(loginCreds)
     dispatch(login(loginCreds))
+      .then((res) => {
+        console.log(res);
+        if (res.token) {
+          navigate("/timer");
+        }
+      })
+      .catch((err) => {
+        alert("Invalid Credentials");
+      });
+    // console.log(token)
+
+    // if(token)
+    // {
+    //   console.log(token)
+    //   navigate("/timer")
+    // }
+    // else
+    // {
+    //   alert("Invalid Credentials");
+    // }
+
     // dispatch(loginAPI(loginCreds));
   };
 

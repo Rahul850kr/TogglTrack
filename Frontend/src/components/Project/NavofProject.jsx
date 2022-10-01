@@ -21,6 +21,7 @@ const NavofProject = () => {
     const dispatch = useDispatch();
   
     const client =useSelector((state) => state.AppReducer.client)
+    const data =useSelector((state) => state.AppReducer.data)
     const [datas,setdatas] = useState({
         NAME:"",
         TEMPLATE:"",
@@ -33,6 +34,8 @@ const NavofProject = () => {
         value = type === "checkbox" ? checked : value;
         setdatas((prev) => ({ ...prev, [name]: value }))
     }
+
+    console.log(data)
    
     const handleSave =()=>{
       
