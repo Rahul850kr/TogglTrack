@@ -7,11 +7,11 @@ export const login = (logdata) => (dispatch) => {
 
   dispatch({ type: types.LOGIN_REQUEST });
   return axios
-    .post(`https://desolate-temple-28731.herokuapp.com/user/login`, logdata)
+    .post(`https://rocky-ocean-46720.herokuapp.com/user/login`, logdata)
     .then((res) => {
       if (res.data.token) {
         dispatch({ type: types.LOGIN_SUCCESS, payload: res.data.token });
-        Navigate("#")
+        Navigate("/timer")
       }
       else 
       {
@@ -26,7 +26,7 @@ export const login = (logdata) => (dispatch) => {
 export const signUp = (signupdata) => (dispatch) => {
   dispatch({ type: types.SIGNUP_REQUEST });
   return axios
-    .post(`https://desolate-temple-28731.herokuapp.com/user/signup`, signupdata)
+    .post(`https://rocky-ocean-46720.herokuapp.com/user/signup`, signupdata)
     .then((res) => {
       dispatch({ type: types.SIGNUP_SUCCESS, payload: res.data });
     })

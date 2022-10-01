@@ -2,7 +2,7 @@
 const {userController} = require("./Routes/user.routes");
 const {connection} = require("./configs/db")
 const express = require("express");
-const cors = require("stream/consumers")
+const cors = require("cors")
 const PORT = process.env.PORT || 8080;
 
 const app = express();
