@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { Stack } from "@chakra-ui/react";
 import { Box, Flex, Text } from "@chakra-ui/layout";
-import { signUp } from "../store/auth/auth.actions";
+// import { signUp } from "../store/auth/auth.actions";
 
 const Signup = () => {
   const [form, setForm] = useState({});
