@@ -6,6 +6,7 @@ import { Stack } from "@chakra-ui/react";
 import { Box, Flex, Text } from "@chakra-ui/layout";
 // import { signUp } from "../store/auth/auth.actions";
 import {signUp} from "../Redux/AuthReducer/action"
+import Navbar from "../components/Navbar/Navbar";
 
 const Signup = () => {
   const [form, setForm] = useState({});
@@ -58,6 +59,8 @@ const Signup = () => {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="signup">
       <Stack className="signupbox1">
         <Text fontSize="5xl">
@@ -184,6 +187,7 @@ const Signup = () => {
         </div>
       </Box>
     </div>
+    </>
   );
 };
 

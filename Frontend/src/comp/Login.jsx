@@ -2,6 +2,7 @@ import { Flex, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar/Navbar";
 import { login } from "../Redux/AuthReducer/action";
 // import { loginAPI } from "../store/auth/auth.actions";
 import "./Login.css";
@@ -64,6 +65,8 @@ const Login = () => {
   // }, [isAuth, Saved_data, loginCreds, location, navigate]);
 
   return (
+    <>
+    <Navbar/>
     <div className="login">
       <div className="loginbackground">
         <Text className="text1">Log in to your account</Text>
@@ -142,6 +145,7 @@ const Login = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
