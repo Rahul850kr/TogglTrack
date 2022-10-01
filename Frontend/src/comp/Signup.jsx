@@ -26,7 +26,7 @@ const Signup = () => {
     localStorage.setItem("userData", JSON.stringify(form));
     const UserInfo = JSON.parse(localStorage.getItem("userData"));
     console.log("UserInfo", UserInfo);
-    dispatch(signUp(UserInfo));
+    // dispatch(signUp(UserInfo));
     navigate("/login");
   };
 
