@@ -1,13 +1,15 @@
+
 import './App.css';
-import MainHome from './Homepage/MainHome';
-import Product from './Homepage/Product';
-import Header from './Homepage/Header';
+import AllRoutes from './components/AllRoutes/AllRoutes';
+
 function App() {
   return (
     <div className="App">
-       <MainHome/>
-       {/* <Header/> */}
-       {/* <Product/> */}
+
+ <AllRoutes />
+    
+
+
     </div>
   );
 }
