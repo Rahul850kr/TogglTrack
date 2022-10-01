@@ -8,7 +8,7 @@ const Addtodorouter = express.Router()
 Addtodorouter.get("/todo", authentication,async (req, res)=>{
     try{
         const p = req.body.userId
-        const out = await TodoModel.find({Author:p})
+        const out = await TodoModel.find({Author:p}).populate("Client")
         res.status(200).json(out)
     }catch(e){
         res.status(400).json({ msg:"Something went wrong"})

@@ -1,5 +1,5 @@
-import React from 'react'
-import { Box, Button, Flex, FormControl, FormLabel, Input, Select, Spacer, Stack, Switch, useDisclosure } from '@chakra-ui/react'
+import React, { useState } from 'react'
+import { Box, Button, Flex, FormControl, FormLabel, Input, Select, Spacer, Stack, StackItem, Switch, useDisclosure } from '@chakra-ui/react'
 import Sidebar from '../Task/sideBar'
 import {
     Modal,
@@ -10,11 +10,28 @@ import {
     ModalBody,
     ModalCloseButton,
 } from '@chakra-ui/react'
+import {getClient, PostClient } from '../../Redux/AppReducer/action'
+import { useDispatch, useSelector } from 'react-redux'
+
+import ShowClient from './ShowClient'
+
 
 const Clientofproject = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
+   
     const initialRef = React.useRef(null)
     const finalRef = React.useRef(null)
+    const [name,setname ] = useState("")
+    const dispatch = useDispatch()
+    
+
+    const handleSubmit=()=>{ 
+      const data ={name:name}
+     dispatch(PostClient(data))
+     dispatch(getClient())
+    }
+
+ 
 
   return (
     <Box>
@@ -40,13 +57,12 @@ const Clientofproject = () => {
                         <ModalBody pb={6}>
                             <FormControl>
                                 <FormLabel>Name  of client</FormLabel>
-                                <Input ref={initialRef} placeholder='Nameof Client' />
+                                <Input ref={initialRef} placeholder='Nameof Client' onChange={(e)=>setname(e.target.value)}/>
                             </FormControl>
                         </ModalBody>
-
                         <ModalFooter>
-                            <Button colorScheme='blue' mr={3}>
-                                Save
+                            <Button colorScheme='blue' mr={3} onClick={handleSubmit}>
+                                Save 
                             </Button>
                             <Button onClick={onClose}>Cancel</Button>
                         </ModalFooter>
@@ -54,6 +70,7 @@ const Clientofproject = () => {
                 </Modal>
             </Box>
         </Flex>
+        <ShowClient/>
     </Box>
 </Box>
   )
