@@ -2,7 +2,7 @@ import axios from "axios"
 // import { TbToolsKitchenOff } from "react-icons/tb"
 import { ADDCLIENT, ADDPROJECT, DELETECLIENT, DELETEPROJECT, GETCLIENT, GETPROJECT } from "./actionTypes"
 
-const url = "http://localhost:8080"
+const url = "https://toggltrack521.herokuapp.com"
 const token = JSON.parse(localStorage.getItem("token"))
 export const getProject = () => async (dispatch) => {
 
