@@ -12,6 +12,9 @@ import moment from "moment";
 import "tui-calendar/dist/tui-calendar.css";
 
 import "./styles.css";
+import TimerHeader from "./TimerHeader";
+import { Box, Flex } from "@chakra-ui/react";
+import { Input } from "reactstrap";
 
 const CustomTuiCalendar = forwardRef(
   (
@@ -257,9 +260,9 @@ const CustomTuiCalendar = forwardRef(
             if (timezone.dateDifference) {
               templates.push(
                 "[" +
-                  timezone.dateDifferenceSign +
-                  timezone.dateDifference +
-                  "]<br>"
+                timezone.dateDifferenceSign +
+                timezone.dateDifference +
+                "]<br>"
               );
             }
 
@@ -457,8 +460,8 @@ const CustomTuiCalendar = forwardRef(
       if (!isAllDay) {
         html.push(
           "<strong>" +
-            moment(schedule.start.toDate()).format("HH:mm") +
-            "</strong> "
+          moment(schedule.start.toDate()).format("HH:mm") +
+          "</strong> "
         );
       }
       if (schedule.isPrivate) {
@@ -577,73 +580,16 @@ const CustomTuiCalendar = forwardRef(
 
     return (
       <div>
-        {showSlidebar && (
-          <div id="lnb">
-            {onCreate && (
-              <div className="lnb-new-schedule">
-                <button
-                  id="btn-new-schedule"
-                  type="button"
-                  className="btn btn-default btn-block lnb-new-schedule-btn"
-                  data-toggle="modal"
-                  onClick={onCreate}
-                >
-                  {createText}
-                </button>
-              </div>
-            )}
-            <div id="lnb-calendars" className="lnb-calendars">
-              <div>
-                <div className="lnb-calendars-item">
-                  {/* <label>
-                    <input
-                      className="tui-full-calendar-checkbox-square"
-                      type="checkbox"
-                      defaultValue="all"
-                      checked={checkedCalendars.every(
-                        (element) => element.isChecked === true
-                      )}
-                      onChange={handleAllChecked}
-                    /> */}
-                    {/* <span /> */}
-                    {/* <strong>View all</strong> */}
-                  {/* </label> */}
-                </div>
-              </div>
-              <div id="calendarList" className="lnb-calendars-d1">
-                {checkedCalendars.map((element, i) => {
-                  return (
-                    <div key={i} className="lnb-calendars-item">
-                      <label>
-                        <input
-                          type="checkbox"
-                          className="tui-full-calendar-checkbox-round"
-                          defaultValue={element.id}
-                          checked={element.isChecked}
-                          onChange={handleCheckChildElement}
-                        />
-                        <span
-                          style={{
-                            borderColor: element.bgColor,
-                            backgroundColor: element.isChecked
-                              ? element.bgColor
-                              : "transparent"
-                          }}
-                        />
-                        <span>{element.name}</span>
-                      </label>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          
-          </div>
-        )}
 
         <div id="right" style={{ left: !showSlidebar && 0 }}>
           {showMenu && (
             <div id="menu">
+              <TimerHeader />
+              {/* // WEEKLY DROP DOWN */}
+
+              <Flex mt='10' mr='5' justifyContent={"end"}>
+
+              
               <span
                 ref={wrapperRef}
                 style={{ marginRight: "4px" }}
@@ -794,7 +740,7 @@ const CustomTuiCalendar = forwardRef(
                         type="checkbox"
                         className="tui-full-calendar-checkbox-square"
                         checked={workweek}
-                        onChange={() => {}}
+                        onChange={() => { }}
                       />
                       <span className="checkbox-title" />
                       Show weekends
@@ -827,7 +773,7 @@ const CustomTuiCalendar = forwardRef(
                         type="checkbox"
                         className="tui-full-calendar-checkbox-square"
                         checked={startDayOfWeek !== 1 ? true : false}
-                        onChange={() => {}}
+                        onChange={() => { }}
                       />
                       <span className="checkbox-title" />
                       Start Week on Monday
@@ -860,7 +806,7 @@ const CustomTuiCalendar = forwardRef(
                         type="checkbox"
                         className="tui-full-calendar-checkbox-square"
                         checked={narrowWeekend}
-                        onChange={() => {}}
+                        onChange={() => { }}
                       />
                       <span className="checkbox-title" />
                       Narrower than weekdays
@@ -916,9 +862,13 @@ const CustomTuiCalendar = forwardRef(
                   />
                 </button>
               </span>
-              <span id="renderRange" className="render-range">
+
+              {/* <span id="renderRange" className="render-range">
                 {renderRange}
-              </span>
+              </span> */}
+              </Flex>
+
+              
             </div>
           )}
           <div ref={tuiRef} style={{ height }} />
