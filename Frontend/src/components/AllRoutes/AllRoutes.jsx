@@ -24,6 +24,13 @@ const AllRoutes = () => {
         <Route path="/project" element={<NavofProject/>}/>
         <Route path="/client" element={<Clientofproject/>}/>
         <Route  path="/timer" element={<Taskmanage/>}/>
+
+
+        <Route  path="/payroll" element={<Payroll/>}/>
+        <Route  path="/projectbudget" element={<ProjectBudget/>}/>
+        <Route  path="/employeetime" element={<EmployeeTime/>}/>
+        <Route  path="/reporting" element={<Reporting/>}/>
+        <Route  path="/billinginvoice" element={<BillingInvoicing/>}/>
     </Routes>
   )
 }

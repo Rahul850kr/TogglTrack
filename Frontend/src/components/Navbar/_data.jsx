@@ -24,35 +24,35 @@ export const links = [
         label: "Employee time tracking",
         description:
           "Loved by teams and team leads. Error-free timesheet data and ease of use",
-        href: "#",
+        href: "/employeetime",
         icon: <RiUser2Fill />,
       },
       {
         label: "Billing and invoicing",
         description:
           "Capture every billable minute so you can invoice with ease and precision",
-        href: "#",
+        href: "/billinginvoice",
         icon: <GiReceiveMoney />,
       },
       {
         label: "Payroll",
         description:
           "Calculate payroll for contractors and employees based on accurate data",
-        href: "#",
+        href: "/payroll",
         icon: <IoCalendar />,
       },
       {
         label: "Reporting and transparency",
         description:
           "Get a big picture overview or dig into details with insightful reports",
-        href: "#",
+        href: "/reporting",
         icon: <AiTwotonePieChart />,
       },
       {
         label: "Project budgeting",
         description:
           "Stay on track with budgets and deadlines. Eliminate scope creep and overwork",
-        href: "#",
+        href: "/projectbudget",
         icon: <FiTarget />,
       },
     ],
