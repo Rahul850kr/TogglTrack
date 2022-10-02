@@ -40,8 +40,9 @@ const NavofProject = () => {
     const handleSave =()=>{
       
     const {NAME,TEMPLATE,VISIBILITY,Client} = datas
-    dispatch(PostProject({NAME,TEMPLATE,VISIBILITY,Client}))
-    dispatch(getProject())
+    dispatch(PostProject({NAME,TEMPLATE,VISIBILITY,Client})).then(()=> dispatch(getProject())).then(()=>onClose())
+   
+    
     }
     useEffect(()=>{
         dispatch(getClient())

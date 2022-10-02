@@ -7,11 +7,12 @@ const intialState ={
 }
 
 export const reducer =(state=intialState,{type,payload})=>{
+    
 
    switch (type) {
     
     case ADDPROJECT:
-        return {...state,data:[...payload]}
+        return {...state,data:[...state.data,payload]}
     
     case GETPROJECT:
         
@@ -21,7 +22,7 @@ export const reducer =(state=intialState,{type,payload})=>{
         return {...state}  
     
     case ADDCLIENT:
-        return {...state,client:[...payload]}    
+        return {...state,client:[...state.client,payload]}    
 
 
     case GETCLIENT:
