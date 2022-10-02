@@ -7,7 +7,7 @@ import Clientofproject from '../Project/Clientofproject'
 import NavofProject from '../Project/NavofProject'
 import Taskmanage from '../Task/TaskManager'
 import MainHome from '../Homepage/MainHome';
-
+import PrivateRoute from "./PrivateRoute"
 
 const AllRoutes = () => {
   return (
@@ -18,7 +18,7 @@ const AllRoutes = () => {
       <Route path="/signup" element= {<Signup/>} />
         <Route path="/project" element={<NavofProject/>}/>
         <Route path="/client" element={<Clientofproject/>}/>
-        <Route  path="/timer" element={<Taskmanage/>}/>
+        <Route  path="/timer" element={ <PrivateRoute ><Taskmanage/></PrivateRoute>} />
     </Routes>
   )
 }

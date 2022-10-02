@@ -45,9 +45,12 @@ import { FaTag, FaQuestion, FaUserTie } from "react-icons/fa";
 
 import { FaStopwatch } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 const Sidebar = ({ children }) => {
   const navigate = useNavigate()
   const { isOpen, onOpen, onClose } = useDisclosure();
+const data=useSelector((state) => state.AppReducer.client)
+console.log(data)
   return (
     <div style={{ border: "1px solid black" }}>
       <Box
@@ -366,6 +369,14 @@ const Sidebar = ({ children }) => {
 }
 
 function Pop() {
+  const navigate=useNavigate()
+  const email=localStorage.getItem('userEmail')
+
+  const handleCLick=()=>{
+    localStorage.removeItem('userEmail')
+    localStorage.removeItem('token')
+    navigate('/')
+  }
   return (
     <Popover trigger="hover">
       <PopoverTrigger>
@@ -380,8 +391,8 @@ function Pop() {
         <PopoverArrow />
         <PopoverBody>
           <Flex direction={"column"}>
-            <Text mt="4" mb="4" fontWeight={"bold"} >Email : xyz@gmail.com</Text>
-            <Button p="4" mb="2" size={"xs"}>Log Out</Button>
+            <Text mt="4" mb="4" fontWeight={"bold"} >Email : {email}</Text>
+            <Button p="4" mb="2" size={"xs"} onClick={handleCLick}>Log Out</Button>
           </Flex>
         </PopoverBody>
       </PopoverContent>

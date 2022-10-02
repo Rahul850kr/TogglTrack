@@ -10,7 +10,9 @@ export const login = (logdata) => async (dispatch) => {
 //     "email":"rahul@gmail.com",
 //     "password":"rahul123"
 // }
+
 console.log(logdata)
+
   dispatch({ type: types.LOGIN_REQUEST });
   const res = await axios.post(`http://localhost:8080/user/login`,logdata);
   dispatch({type:types.LOGIN_SUCCESS,payload:res.data.token})
