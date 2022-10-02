@@ -61,7 +61,7 @@ console.log(data)
         pos="fixed"
         h="full"
       >
-        <Flex mt='6'>
+        <Flex mt='6' onClick={()=>navigate('/')}>
           <Image margin="auto" h="20px" w="60%" src="https://assets.website-files.com/5f699d08507c7daf18b16e6a/61235a16de9b7eb783fe6b73_toggl-track_.png" />
           <Box w='20%'>
           <BellIcon fontSize={"xl"} color="white" />
@@ -384,7 +384,7 @@ function Pop() {
           borderRadius="10px" _hover={{ bg: 'grey', color: 'white' }}>
           <Flex justify={"center"}>
             <FaUserTie color="white" fontSize="20px" />
-            <Text mt="1" ml='2' color="white" >NAME OF LOGGEDIN</Text></Flex>
+            <Text mt="1" ml='2' color="white" >{email}</Text></Flex>
         </Box>
       </PopoverTrigger>
       <PopoverContent w='14em'>
