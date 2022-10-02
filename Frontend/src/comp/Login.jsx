@@ -18,6 +18,7 @@ const Login = () => {
   // console.log(Saved_data.Email);
   const responseGoogle = response => {
     console.log(response);
+
   };
   
   const handleSubmit = (e) => {
@@ -28,7 +29,9 @@ const Login = () => {
     dispatch(login(loginCreds))
       .then((res) => {
         console.log(res);
+
         if (res.token) {
+          localStorage.setItem("userEmail",loginCreds.email)
           navigate("/timer");
         }
       })
@@ -82,15 +85,13 @@ const Login = () => {
               <Link className="anchor1" to="/login">
             
                   
-                 
               <GoogleLogin
-              style={{backgroundColor:"transparent"}}
-              
-                clientId="1034649986044-qn71vpsnob5l2tt5g61300bihkm6eaid.apps.googleusercontent.com"
-                // buttonText="Login"
-                onSuccess={responseGoogle}
-                onFailure={responseGoogle}
-              />
+          clientId="472214168291-868c76v49eshsi2gd2o8i3k636jtibvg.apps.googleusercontent.com"
+          buttonText="Login"
+          onSuccess={responseGoogle}
+          onFailure={responseGoogle}
+          cookiePolicy={"single_host_origin"}
+        />
                
               </Link>
               <Link className="anchor1" to="/login">

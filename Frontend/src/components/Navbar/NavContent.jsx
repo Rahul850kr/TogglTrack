@@ -51,9 +51,11 @@ import {
             )
           )}
           <Box display="flex" alignItems="center" justifyContent="center">
+          <Link to="/timer">
             <Button borderRadius="25px" colorScheme="blue" size="lg" mt="5">
               Try for free
             </Button>
+            </Link>
           </Box>
           <Box
             display="flex"
@@ -129,6 +131,7 @@ import {
           >
             <Link to="/login">Log in</Link>
           </Box>
+          <Link to='/timer'>
           <Button
             as="a"
             href="#"
@@ -138,6 +141,7 @@ import {
           >
             Try for free
           </Button>
+          </Link>
         </HStack>
       </Flex>
     );

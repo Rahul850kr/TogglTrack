@@ -45,9 +45,12 @@ import { FaTag, FaQuestion, FaUserTie } from "react-icons/fa";
 
 import { FaStopwatch } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 const Sidebar = ({ children }) => {
   const navigate = useNavigate()
   const { isOpen, onOpen, onClose } = useDisclosure();
+const data=useSelector((state) => state.AppReducer.client)
+console.log(data)
   return (
     <div style={{ border: "1px solid black" }}>
       <Box
@@ -58,7 +61,7 @@ const Sidebar = ({ children }) => {
         pos="fixed"
         h="full"
       >
-        <Flex mt='6'>
+        <Flex mt='6' onClick={()=>navigate('/')}>
           <Image margin="auto" h="20px" w="60%" src="https://assets.website-files.com/5f699d08507c7daf18b16e6a/61235a16de9b7eb783fe6b73_toggl-track_.png" />
           <Box w='20%'>
           <BellIcon fontSize={"xl"} color="white" />
@@ -367,6 +370,14 @@ const Sidebar = ({ children }) => {
 }
 
 function Pop() {
+  const navigate=useNavigate()
+  const email=localStorage.getItem('userEmail')
+
+  const handleCLick=()=>{
+    localStorage.removeItem('userEmail')
+    localStorage.removeItem('token')
+    navigate('/')
+  }
   return (
     <Popover trigger="hover">
       <PopoverTrigger>
@@ -374,15 +385,15 @@ function Pop() {
           borderRadius="10px" _hover={{ bg: 'grey', color: 'white' }}>
           <Flex justify={"center"}>
             <FaUserTie color="white" fontSize="20px" />
-            <Text mt="1" ml='2' color="white" >NAME OF LOGGEDIN</Text></Flex>
+            <Text mt="1" ml='2' color="white" >{email}</Text></Flex>
         </Box>
       </PopoverTrigger>
       <PopoverContent w='14em'>
         <PopoverArrow />
         <PopoverBody>
           <Flex direction={"column"}>
-            <Text mt="4" mb="4" fontWeight={"bold"} >Email : xyz@gmail.com</Text>
-            <Button p="4" mb="2" size={"xs"}>Log Out</Button>
+            <Text mt="4" mb="4" fontWeight={"bold"} >Email : {email}</Text>
+            <Button p="4" mb="2" size={"xs"} onClick={handleCLick}>Log Out</Button>
           </Flex>
         </PopoverBody>
       </PopoverContent>
