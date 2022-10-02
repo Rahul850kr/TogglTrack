@@ -112,7 +112,8 @@ const Sidebar = ({ children }) => {
             </Text>
             {/* <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} /> */}
           </Flex>
-          <Flex
+          <Flex 
+          
             align="center"
             p="1"
             mx="2"
