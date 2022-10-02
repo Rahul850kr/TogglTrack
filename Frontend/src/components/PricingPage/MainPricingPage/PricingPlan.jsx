@@ -5,17 +5,20 @@ import Download from "../Download/Download"
 
 import PricingBox from "../PricingBox/PricingBox";
 import { AiFillCaretRight } from "react-icons/ai";
-import HomeSameSignUp from "../../Products_Page/HomePage_sign_up/HomeSameSignUp.jsx";
+import SameSignUp from "../../Billing-invoicing/Same_Sign_up/Same_Sign-up"
 
-import EmployeeFAQ from "../../Products_Page/Employee_time/Employee_FAQ/EmployeeFAQ"
+// import EmployeeFAQ from "../../Products_Page/Employee_time/Employee_FAQ/EmployeeFAQ"
+// import EmployeeFAQ from "../../Products_Page/Employee_time/Employee_FAQ/EmployeeFAQ"
 
 import Table from "../Table/Table";
 
 
-import HomeNavbar from "../../Products_Page/Home_Navbar/HomeNavbar.jsx";
+// import HomeNavbar from "../../Products_Page/Home_Navbar/HomeNavbar.jsx";
 
 
-import Footertop from "../../Homepage/Footer/Footer";
+// import Footertop from "../../Homepage/Footer/Footer";
+import Navbar from "../../Navbar/Navbar";
+import Footer from "../../Homepage/Footer";
 
 
 
@@ -28,7 +31,7 @@ const PricingPlan = () => {
 
         <div>
             <div>
-                <HomeNavbar />
+                <Navbar />
             </div>
             <div className={styles.container}>
                 <h1 className={styles.heading}>Pricing Plans</h1>
@@ -44,11 +47,11 @@ const PricingPlan = () => {
                 <button className={styles.planFeatureBtn}>Compare all plan features <AiFillCaretRight />  </button>
 
                 <ReviewBox />
-                <EmployeeFAQ />
+                {/* <EmployeeFAQ /> */}
                 <Table />
                 <Download />
                 <div style={{ width: "70%", margin: "auto", textAlign: "left" }}>
-                    <HomeSameSignUp />
+                    <SameSignUp />
 
 
                 </div>
@@ -56,7 +59,7 @@ const PricingPlan = () => {
 
                 <div style={{ backgroundColor: "#2d1738", textAlign: "left", marginTop: "50px" }}>
                     <div style={{ width: "80%", margin: "0 auto" }}>
-                        <Footertop />
+                        <Footer />
 
                     </div>
                 </div>

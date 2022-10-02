@@ -12,6 +12,7 @@ import Reporting from '../ReportingAndTrans/Reporting'
 import EmployeeTime from '../Employe-time/EmployeeTime'
 import ProjectBudget from '../Project_Budget/ProjectsBudget'
 import Payroll from '../Payroll/Payroll'
+import PricingPlan from '../PricingPage/MainPricingPage/PricingPlan'
 
 
 const AllRoutes = () => {
@@ -31,6 +32,7 @@ const AllRoutes = () => {
         <Route  path="/employeetime" element={<EmployeeTime/>}/>
         <Route  path="/reporting" element={<Reporting/>}/>
         <Route  path="/billinginvoice" element={<BillingInvoicing/>}/>
+        <Route  path="/pricing" element={<PricingPlan/>}/>
     </Routes>
   )
 }
