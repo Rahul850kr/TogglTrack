@@ -8,6 +8,10 @@ import NavofProject from '../Project/NavofProject'
 import Taskmanage from '../Task/TaskManager'
 import MainHome from '../Homepage/MainHome';
 import BillingInvoicing from '../Billing-invoicing/Billing'
+import Reporting from '../ReportingAndTrans/Reporting'
+import EmployeeTime from '../Employe-time/EmployeeTime'
+import ProjectBudget from '../Project_Budget/ProjectsBudget'
+import Payroll from '../Payroll/Payroll'
 
 
 const AllRoutes = () => {
@@ -20,8 +24,6 @@ const AllRoutes = () => {
         <Route path="/project" element={<NavofProject/>}/>
         <Route path="/client" element={<Clientofproject/>}/>
         <Route  path="/timer" element={<Taskmanage/>}/>
-
-        <Route  path="/billing" element={<BillingInvoicing/>}/>
     </Routes>
   )
 }

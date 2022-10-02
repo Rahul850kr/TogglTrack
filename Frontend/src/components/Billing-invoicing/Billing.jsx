@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
-import styles from "../../components/Employe-time/employee.module.css"
+import styles from "../../components/Employe-time/employee.module.css";
+import EmployeeFAQ from "../../components/Employe-time/Employee_FAQ/EmployeeFAQ";
 import Footer from '../Homepage/Footer';
 import Navbar from '../Navbar/Navbar';
 import SameSignUp from "./Same_Sign_up/Same_Sign-up"
@@ -164,9 +165,9 @@ const BillingInvoicing = () => {
                     </div>
                 </div>
 
-                <h2 className={styles.employee_page_faq_main_content_h2}>
+                {/* <h2 className={styles.employee_page_faq_main_content_h2}>
                     FAQs
-                </h2>
+                </h2> */}
                 <div>
                     {/* <EmployeeFAQ /> */}
                 </div>

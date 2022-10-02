@@ -1,11 +1,11 @@
 import React from 'react'
-import SameSignUp from '../Same_Sign_up/Same_Sign-up'
-import SameSignUp2 from '../Same_Sign_up2/Same_Sign_up2'
-import styles from '../Employee_time/employee.module.css'
-import EmployeeFAQ from '../Employee_time/Employee_FAQ/EmployeeFAQ';
+
+import styles from '../Employe-time/employee.module.css'
+
 import { useNavigate } from "react-router-dom";
-import HomeNavbar from '../Home_Navbar/HomeNavbar';
-import Footertop from "../../Homepage/Footer/Footer";
+
+import Navbar from '../Navbar/Navbar';
+import Footer from '../Homepage/Footer';
 
 
 
@@ -16,7 +16,7 @@ const Reporting = () => {
     return (
         <>
             <div>
-                <HomeNavbar />
+                <Navbar />
             </div>
             {/*here i worked on  Employee time tracking software your team will love */}
 
@@ -158,7 +158,7 @@ const Reporting = () => {
 
             <div className={styles.employee_page_faq_main_content_container}>
                 <div className={styles.employee_page_faq_main_content_container_signup2}>
-                    <SameSignUp2 />
+                    {/* <SameSignUp /> */}
                 </div>
                 <div className={styles.employee_page_faq_main_content_onbording}>
                     <p>Onboarding a team?</p>
@@ -168,11 +168,11 @@ const Reporting = () => {
                     </div>
                 </div>
 
-                <h2 className={styles.employee_page_faq_main_content_h2}>
+                {/* <h2 className={styles.employee_page_faq_main_content_h2}>
                     FAQs
-                </h2>
+                </h2> */}
                 <div>
-                    <EmployeeFAQ />
+                    {/* <EmployeeFAQ /> */}
                 </div>
             </div>
 
@@ -195,7 +195,7 @@ const Reporting = () => {
                     </div>
                     <div>
 
-                        <SameSignUp />
+                        {/* <SameSignUp /> */}
 
                     </div>
                 </div>
@@ -206,7 +206,7 @@ const Reporting = () => {
 
             <div style={{ backgroundColor: "#2d1738", textAlign: "left", marginTop: "50px" }}>
                 <div style={{ width: "80%", margin: "0 auto" }}>
-                    <Footertop />
+                    <Footer />
                 </div>
             </div>
 
