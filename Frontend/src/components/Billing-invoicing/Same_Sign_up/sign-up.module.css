@@ -1,0 +1,135 @@
+
+.signUp_mainContainer{
+    background-color: #412A4C;
+    max-width: 600px;
+    height: 595px;
+}
+.signUp_childContainer{
+    max-width: 500px;
+    margin: 0 auto;
+    padding : 0px 45px;
+    font-family: 'GT Haptik Medium',sans-serif;
+
+
+}
+.signUp_mainContainer_button_div{
+   display: flex; 
+   justify-content: space-between;
+   padding-top: 55px; 
+}
+.signUp_mainContainer_button{
+    height: 50px;
+    width: 240px;
+    display: flex;
+    font-size: 1rem;
+    background: white;
+    border: none;
+    color: #2C1338;
+    cursor: pointer;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.signUp_mainContainer_button:hover{
+    background-color:  #FCE5D8;
+}
+.signUp_mainContainer_svg{
+    height: 32px;
+    width: 32px;
+    margin-right: 5px;
+}
+.signUp_mainContainer_or_div{
+    display: flex; 
+    margin-top: 15px;
+}
+.signUp_mainContainer_or_hr{
+    width: 218px;
+    margin-top: 30px;
+    background-color: #ABA0AF;
+    height: 1px;
+    opacity: .3;
+
+}
+.signUp_mainContainer_or{
+    padding: 15px;
+    margin-top:5px;
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+    
+}
+.signUp_mainContainer_input_div{
+    margin-top: -25px;
+}
+.signUp_mainContainer_p{
+   
+    color: #FCE5D8;
+    font-size:16px;
+    margin-left: 3px;
+
+}
+.signUp_mainContainer_p2{
+    margin-top: 19px;
+    font-size:16px;
+    color: #FCE5D8;
+    margin-left: 3px;
+}
+.signUp_mainContainer_input{
+    height:50px;
+    width: 95%;
+    font-size: 17px;
+    border: 2px solid #ABA0AF;
+    background:transparent;
+    padding-left: 20px;
+    color:#313032;
+}
+.signUp_mainContainer_input:focus{
+   background-color: #FCE5D8;
+}
+.signUp_mainContainer_input1_div{
+    display: flex;
+}
+.signUp_mainContainer_input1{
+    height:50px;
+    width: 99%;
+    font-size: 17px;
+    border: 2px solid #ABA0AF;
+    background:transparent;
+    padding-left: 20px;
+    color:#313032;
+    
+}
+.signUp_mainContainer_input1:focus{
+    background-color: #FCE5D8;
+ }
+.signUp_mainContainer_input1_svg{
+    position: relative;
+    top: -48px;
+    float: right;
+    margin-right: 15px;
+    
+}
+.signUp_mainContainer_via_email{
+    margin-top: -13px;
+    height:55px;
+    width: 100%;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #E57CD8;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.signUp_mainContainer_via_email:hover{
+    background-color: #564260;
+    color: #FFF;
+}
+.signUp_mainContaine_description{
+    margin-top: 37px;
+    color: white;
+    font-size: 14px;
+    
+}

@@ -7,6 +7,7 @@ import Clientofproject from '../Project/Clientofproject'
 import NavofProject from '../Project/NavofProject'
 import Taskmanage from '../Task/TaskManager'
 import MainHome from '../Homepage/MainHome';
+import BillingInvoicing from '../Billing-invoicing/Billing'
 
 
 const AllRoutes = () => {
@@ -19,8 +20,13 @@ const AllRoutes = () => {
         <Route path="/project" element={<NavofProject/>}/>
         <Route path="/client" element={<Clientofproject/>}/>
         <Route  path="/timer" element={<Taskmanage/>}/>
+
+        <Route  path="/billing" element={<BillingInvoicing/>}/>
     </Routes>
   )
 }
 
 export default AllRoutes
+
+
+//"react-remove-scroll": "^2.5.4"
