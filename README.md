@@ -16,7 +16,7 @@ Toggl Track (formerly Toggl) is a time tracking software operated by Toggl OÜ t
 - Rahul Kumar
 - Vaishali Verma
 - Saurav Behera
-- ankita singh
+- Ankita singh
 - Raj Mandloi
 
 ## Pages & Features 👇
