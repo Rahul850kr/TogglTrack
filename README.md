@@ -91,6 +91,6 @@ Toggl Track (formerly Toggl) is a time tracking software operated by Toggl OÜ t
 - #### Saurav Behera : https://www.linkedin.com/in/saurav-behera-36bbb5153/
 
 
-### Github Repository : https://github.com/Rahul850kr/habitual-oatmeal-3228
+### Github Repository : https://github.com/Rahul850kr/TogglTrack
 ### Live Link : https://toggltrack521.netlify.app/
 
