@@ -1,16 +1,18 @@
 import React, { useRef, useState } from "react";
 import "./Signup.css";
 import { Link, useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Stack } from "@chakra-ui/react";
 import { Box, Flex, Text } from "@chakra-ui/layout";
 // import { signUp } from "../store/auth/auth.actions";
 import {signUp} from "../Redux/AuthReducer/action"
+import Navbar from "../components/Navbar/Navbar";
 
 const Signup = () => {
   const [form, setForm] = useState({});
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  // const {signupError} = useSelector(store=>store.AuthReducer)
   const ref = useRef();
   const hanldeChange = (e) => {
     let { value, name } = e.target;
@@ -20,20 +22,45 @@ const Signup = () => {
     });
   };
 
+// console.log(signupError);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(form)
+
+      dispatch(signUp(form)).then((res)=>{
+        // console.log(res)
+        if(res=="Request failed with status code 400")
+        {
+          alert("User already exist")
+        }
+        else{
+          navigate("/login")
+        }
+      })
+    // if(signupError)
+    // {
+    //   console.log("hii")
+    // }
+    // else{
+    //   navigate("/login")
+    // }
+
+      // console.log(err)
+    
+    // console.log(form)
     // console.log("hidc");
     // console.log("form", form);
     // localStorage.setItem("userData", JSON.stringify(form));
     // const UserInfo = JSON.parse(localStorage.getItem("userData"));
     // console.log("UserInfo", UserInfo);
-    dispatch(signUp(form))
+    
     // dispatch(signUp(UserInfo));
-    navigate("/login");
+    // navigate("/login");
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="signup">
       <Stack className="signupbox1">
         <Text fontSize="5xl">
@@ -160,6 +187,7 @@ const Signup = () => {
         </div>
       </Box>
     </div>
+    </>
   );
 };
 

@@ -1,7 +1,8 @@
 import * as types from "./actionTypes";
 
 const init = {
-    token:""
+    token:"",
+    signupError:false
 }
 
 export const reducer = (state=init,{type,payload})=>{
@@ -11,7 +12,14 @@ export const reducer = (state=init,{type,payload})=>{
             console.log(payload)
             return {
                 ...state,
+                signupError:false,
                 token:payload
+            }
+        }
+        case types.SIGNUP_FAILURE : {
+            return {
+                ...state,
+                signupError:true
             }
         }
         default:return state;

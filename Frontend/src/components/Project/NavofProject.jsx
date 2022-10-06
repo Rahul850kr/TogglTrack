@@ -21,6 +21,7 @@ const NavofProject = () => {
     const dispatch = useDispatch();
   
     const client =useSelector((state) => state.AppReducer.client)
+    const data =useSelector((state) => state.AppReducer.data)
     const [datas,setdatas] = useState({
         NAME:"",
         TEMPLATE:"",
@@ -33,12 +34,15 @@ const NavofProject = () => {
         value = type === "checkbox" ? checked : value;
         setdatas((prev) => ({ ...prev, [name]: value }))
     }
+
+    console.log(data)
    
     const handleSave =()=>{
       
     const {NAME,TEMPLATE,VISIBILITY,Client} = datas
-    dispatch(PostProject({NAME,TEMPLATE,VISIBILITY,Client}))
-    dispatch(getProject())
+    dispatch(PostProject({NAME,TEMPLATE,VISIBILITY,Client})).then(()=> dispatch(getProject())).then(()=>onClose())
+   
+    
     }
     useEffect(()=>{
         dispatch(getClient())

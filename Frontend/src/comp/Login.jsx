@@ -2,7 +2,9 @@ import { Flex, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar/Navbar";
 import { login } from "../Redux/AuthReducer/action";
+import GoogleLogin from "react-google-login";
 // import { loginAPI } from "../store/auth/auth.actions";
 import "./Login.css";
 
@@ -14,11 +16,40 @@ const Login = () => {
   const navigate = useNavigate();
   // const Saved_data = JSON.parse(localStorage.getItem("userData"));
   // console.log(Saved_data.Email);
+  const responseGoogle = response => {
+    console.log(response);
 
+  };
+  
   const handleSubmit = (e) => {
     e.preventDefault();
+    const token = JSON.parse(localStorage.getItem("token"));
     // console.log("Submit");
+    // console.log(loginCreds)
     dispatch(login(loginCreds))
+      .then((res) => {
+        console.log(res);
+
+        if (res.token) {
+          localStorage.setItem("userEmail",loginCreds.email)
+          navigate("/timer");
+        }
+      })
+      .catch((err) => {
+        alert("Invalid Credentials");
+      });
+    // console.log(token)
+
+    // if(token)
+    // {
+    //   console.log(token)
+    //   navigate("/timer")
+    // }
+    // else
+    // {
+    //   alert("Invalid Credentials");
+    // }
+
     // dispatch(loginAPI(loginCreds));
   };
 
@@ -41,30 +72,36 @@ const Login = () => {
   // }, [isAuth, Saved_data, loginCreds, location, navigate]);
 
   return (
+    <>
+    <Navbar/>
     <div className="login">
       <div className="loginbackground">
-        <Text className="text1">Log in to your account</Text>
+    
+        <Text className="text1" >Log in to your account</Text>
         <Text className="text2">Let's get tracking!</Text>
         <div className="loginmainbox">
           <div className="loginbox2">
-            <Flex className="buttons">
+            <Flex className="buttons" justify={"space-around"}>
               <Link className="anchor1" to="/login">
-                <Flex>
-                  <img
-                    src="https://img.icons8.com/fluency/30/000000/google-logo.png"
-                    alt="img"
-                  />
-                  <button> Signup via Google</button>
-                </Flex>{" "}
+            
+                  
+              <GoogleLogin
+          clientId="472214168291-868c76v49eshsi2gd2o8i3k636jtibvg.apps.googleusercontent.com"
+          buttonText="Login"
+          onSuccess={responseGoogle}
+          onFailure={responseGoogle}
+          cookiePolicy={"single_host_origin"}
+        />
+               
               </Link>
               <Link className="anchor1" to="/login">
                 {" "}
-                <Flex>
+                <Flex width={"100%"}>
                   <img
                     src="https://img.icons8.com/ios-glyphs/30/000000/mac-client.png"
                     alt="img"
                   />
-                  <button>Signup via Apple</button>
+                  <button>login via Apple</button>
                 </Flex>{" "}
               </Link>
             </Flex>
@@ -119,6 +156,7 @@ const Login = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

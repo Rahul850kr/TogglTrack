@@ -1,4 +1,5 @@
 {
+  "homepage":".",
   "name": "toggltrack",
   "version": "0.1.0",
   "private": true,
@@ -18,10 +19,12 @@
     "react": "^18.2.0",
     "react-bell-icon": "^1.0.1",
     "react-dom": "^18.2.0",
+    "react-google-login": "^5.2.2",
     "react-icons": "^4.4.0",
     "react-redux": "^8.0.4",
     "react-router-dom": "^6.4.1",
     "react-scripts": "5.0.1",
+    "react-timer-hook": "^3.0.5",
     "reactstrap": "^9.1.4",
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.1",

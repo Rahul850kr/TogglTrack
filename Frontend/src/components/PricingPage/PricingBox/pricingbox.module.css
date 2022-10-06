@@ -1,0 +1,141 @@
+.container {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.main {
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: space-between;
+    /* border: 5px solid red; */
+    width: 100%;
+    gap: 5px;
+    margin: auto;
+
+}
+
+.main .productCard {
+    width: 19%;
+    position: relative;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* height: 800px; */
+    height: auto;
+    background-color: #412a4c;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    /* margin-right: 10px; */
+
+    padding: 30px 25px;
+    padding-bottom: 10px;
+    background-color: #412a4c;
+    text-align: left;
+}
+
+.premiumPopup {
+    background-color: white !important;
+    color: black;
+}
+
+
+.premiumPopup>h6 {
+    color: #e57cd8;
+}
+
+.premiumPopup::before {
+    position: absolute;
+    height: 99%;
+    width: 95%;
+    top: -5%;
+    left: 0;
+    border-width: 50px 10px 10px 10px;
+    border-color: #e57cd8;
+    border-style: solid;
+    content: "";
+    /* background-color: pink; */
+    z-index: -1;
+
+
+}
+
+.premiumPopup::after {
+    content: "Best Value";
+    transform: translate(-50%, 0);
+    /* background-color: blue; */
+    /* height: 21px; */
+    left: 50%;
+    font-size: 20px;
+    top: -25px;
+    /* width: 100%; */
+    position: absolute;
+}
+
+.main .productCard>h6 {
+    font-size: 25px;
+    margin: 0 0 10px 0;
+}
+
+.main .productCard hr {
+    width: 80%;
+    height: .1px;
+}
+
+.main .productCard .price {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    font-size: 12px;
+    align-items: center;
+}
+
+.productCard .price span {
+    font-size: 60px;
+    color: #E57CD8;
+    margin-right: 15px;
+}
+
+.productCard .main h6 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.main .productCard li {
+    list-style: none;
+    font-size: 14px;
+    line-height: 2;
+    position: relative;
+}
+
+.productCard li svg {
+    margin-right: 20px;
+    color: #E57CD8;
+    font-size: 15px;
+}
+
+.productCard .tooltip {
+    margin-right: 0px;
+    top: 3px;
+    right: 0;
+    position: absolute;
+    color: gray;
+}
+
+
+
+.productCard .getStartedbtn {
+    margin-top: 50px;
+    border-radius: 50px;
+    border: none;
+    width: 90%;
+    padding: 10px;
+    height: 50px;
+    background-color: #2d1738;
+    color: white;
+}
+
+.productCard.getStartedbtn:hover {
+    background-color: hsl(279, 13%, 57%);
+}
