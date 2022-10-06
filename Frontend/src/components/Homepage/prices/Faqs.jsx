@@ -8,13 +8,8 @@ import {
   } from "@chakra-ui/react";
   import {
     Box,
-    Button,
-    Divider,
-    Flex,
-    Stack,
     Text,
-    Image,
-    Input,
+   
   } from "@chakra-ui/react";
 const Faqs = () => {
   return <Box bg="#412a4c" textAlign={"center"}>

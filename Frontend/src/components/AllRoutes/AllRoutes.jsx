@@ -21,18 +21,19 @@ import Payroll from '../Payroll/Payroll'
 const AllRoutes = () => {
   return (
     <Routes>
+        <Route path="/" element={<MainHome/>}></Route>
+
 
       <Route path="/" element={<MainHome/>}/>
       <Route path="/login" element={<Login/>} />
       <Route path="/signup" element= {<Signup/>} />
+
         <Route path="/project" element={<NavofProject/>}/>
         <Route path="/client" element={<Clientofproject/>}/>
 
         <Route  path="/timer" element={ <PrivateRoute ><Taskmanage/></PrivateRoute>} />
 
-    
-
-
+   
         <Route  path="/payroll" element={<Payroll/>}/>
         <Route  path="/projectbudget" element={<ProjectBudget/>}/>
         <Route  path="/employeetime" element={<EmployeeTime/>}/>

@@ -2,12 +2,9 @@ import React from "react";
 import {
     Box,
     Button,
-    Divider,
     Flex,
-    Stack,
     Text,
     Image,
-    Input,
   } from "@chakra-ui/react";
   import { IoMdArrowDropright } from "react-icons/io";
   

@@ -7,7 +7,9 @@ import TimeTaking from './TimeTaking'
 const MainHome = () => {
   return (
     <div>
+
       <Navbar/>
+
        <BelowNav/>
        <TimeTaking/>
        <Footer />
