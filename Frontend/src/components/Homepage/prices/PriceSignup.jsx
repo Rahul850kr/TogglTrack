@@ -2,14 +2,11 @@ import React, { useState } from "react";
 import {
   Box,
   Button,
-  Divider,
   Flex,
-  Stack,
   Text,
-  Image,
   Input,
 } from "@chakra-ui/react";
-import { BsCheckLg, BsGoogle, BsApple } from "react-icons/bs";
+import {  BsGoogle, BsApple } from "react-icons/bs";
 import { IoMdArrowDropright } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 
@@ -33,12 +30,12 @@ const PriceSignup = () => {
           'Content-Type': 'application/json'
         },
   })
-  if(email.length!=0 && password.length!=0)
+  if(email.length!==0 && password.length!==0)
   {
       alert("register successfully")
       navigate("/login")
   }
-  if(email.length==0 && password.length==0)
+  if(email.length===0 && password.length===0)
   {
       alert("please sigup")
       

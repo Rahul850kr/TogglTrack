@@ -17,12 +17,13 @@ import {ChevronRightIcon} from "@chakra-ui/icons";
 const TimeTaking = () => {
   return (
     <>
-     <Box bg='#fef6f3' p='5rem'>        
+     <Box bg='#fef6f3' p='5rem' width={["100%"]}>        
         <Box>
         <Text as='b' mt={'2rem'} fontSize={{ base: '24px', md: '30px', lg: '38px' }}>Time tracking for all your productivity and</Text>
         <br></br>
         <Text as='b' mb={'2rem'} fontSize={{ base: '24px', md: '30px', lg: '38px' }}>profitability needs</Text>
          </Box>
+
 
         <Stack direction={{base:"column",md:"row",lg:"row"}} spacing={8} ml={['2rem']} p={10}
            marginBottom={["30px"]}  justifyContent={["center"]} >
@@ -45,9 +46,14 @@ const TimeTaking = () => {
 
         </Stack>
 
-         <Box w={[200, 1000, 1600]}mb={6}>
-            <Image ml={['0','0','3']}  src={timesheet} alt=''></Image>
-         </Box>
+      
+         <Box>
+        <Wrap justify='center' spacing={4}>
+            <WrapItem w={[400, 800, 1000]} >
+              <Center><Image src={timesheet} alt="img"></Image></Center>
+            </WrapItem>
+            </Wrap>
+        </Box>
 
      </Box>
 
@@ -146,7 +152,7 @@ const TimeTaking = () => {
             </Box>
 
             <Box w={[200, 300, 300]} >
-                <Text color='#e57cd8' as='b' fontSize={{ base: '10px', md: '20px', lg: '23px' }} textAlign='left' mr={4}>
+                <Text color='#e57cd8' as='b' fontSize={{ base: '10px', md: '20px', lg: '22px' }} textAlign='left' mr={4}>
                   40+ hours saved per week</Text>
                 <Text color='#7f7582' noOfLines={2} textAlign='left' fontSize={{ base: '10px', md: '20px', lg: '20px' }} 
                   ml={['8','0','0']}>at Perception Engineering with simple, one click time tracking and invoicing</Text>
