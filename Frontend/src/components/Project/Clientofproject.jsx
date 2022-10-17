@@ -30,7 +30,7 @@ const Clientofproject = () => {
         const data = { name: name }
 
         dispatch(PostClient(data)).then(() => dispatch(getClient()))
-
+        onClose();
     }
     return (
         <Box>

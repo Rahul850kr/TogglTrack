@@ -50,7 +50,7 @@ const Sidebar = ({ children }) => {
   const navigate = useNavigate()
   const { isOpen, onOpen, onClose } = useDisclosure();
 const data=useSelector((state) => state.AppReducer.client)
-console.log(data)
+// console.log(data)
   return (
     <div style={{ border: "1px solid black" }}>
       <Box

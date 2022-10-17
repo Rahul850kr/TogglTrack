@@ -29,7 +29,7 @@ import { useDispatch, useSelector } from 'react-redux'
 const ShowProject = () => {
     const dispatch = useDispatch()
     const data =useSelector((state) => state.AppReducer.data)
-    console.log(data)
+    // console.log(data)
     useEffect(()=>{
        dispatch(getProject())
     },[])
@@ -56,8 +56,8 @@ const ShowProject = () => {
     </Thead>
     <Tbody>
      
-        {data.map((e)=>(
-             <Tr>
+        {data?.map((e,i)=>(
+             <Tr key={i}>
              <Td>{e.NAME}</Td>
              <Td>{e.TEMPLATE}</Td>
              <Td>{e.Client?.name}</Td>

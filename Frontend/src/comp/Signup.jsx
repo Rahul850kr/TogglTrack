@@ -7,6 +7,7 @@ import { Box, Flex, Text } from "@chakra-ui/layout";
 // import { signUp } from "../store/auth/auth.actions";
 import {signUp} from "../Redux/AuthReducer/action"
 import Navbar from "../components/Navbar/Navbar";
+import signupDesc from "./toggltrack.png"
 
 const Signup = () => {
   const [form, setForm] = useState({});
@@ -117,7 +118,7 @@ const Signup = () => {
               </Flex>
             </div>
             <br />
-            <Box>
+            <Box paddingRight="20px">
               <form onSubmit={handleSubmit}>
                 <label htmlFor="">UserName</label>
                 <br />
@@ -182,7 +183,7 @@ const Signup = () => {
             </Box>
           </Box>
           <Box>
-            <img src="/capterra.png" alt="capterra" />
+            <img src={signupDesc} alt="capterra" />
           </Box>
         </div>
       </Box>

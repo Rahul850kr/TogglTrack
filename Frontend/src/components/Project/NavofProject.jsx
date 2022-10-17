@@ -35,7 +35,7 @@ const NavofProject = () => {
         setdatas((prev) => ({ ...prev, [name]: value }))
     }
 
-    console.log(data)
+    // console.log(data)
    
     const handleSave =()=>{
       

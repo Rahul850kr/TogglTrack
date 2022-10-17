@@ -25,7 +25,8 @@ import { deleteClient, getClient, PostClient } from '../../Redux/AppReducer/acti
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 const ShowClient = () => {
-  const client = useSelector((state) => state.AppReducer.client)
+  const client = useSelector((state) => state.AppReducer.client) || [];
+  // console.log(client)
   const dispatch = useDispatch()
   
   useEffect(() => {
@@ -52,8 +53,8 @@ const ShowClient = () => {
           </Thead>
           <Tbody>
 
-            {client?.map((e) => (
-              <Tr>
+            {client.map((e,i) => (
+              <Tr key={i}>
                 <Td>{e.name}</Td>
                 <Td>{e.clientofuser.name}</Td>
                 <Td>

@@ -28,14 +28,20 @@ const Login = () => {
     // console.log(loginCreds)
     dispatch(login(loginCreds))
       .then((res) => {
-        console.log(res);
+        // console.log(res);
 
         if (res.token) {
           localStorage.setItem("userEmail",loginCreds.email)
           navigate("/timer");
         }
+        else
+        {
+          // console.log(res)
+          alert("Invalid credentials")
+        }
       })
       .catch((err) => {
+        // console.log(err)
         alert("Invalid Credentials");
       });
     // console.log(token)
@@ -141,7 +147,7 @@ const Login = () => {
               </div>
               <br />
               <br />
-              <button className="loginbutton">Login</button>
+              <input className="loginbutton" value="login" type="submit"/>
             </form>
           </div>
         </div>

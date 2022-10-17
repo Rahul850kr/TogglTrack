@@ -35,10 +35,18 @@
     border: 1px solid white;
     width:500px;
     height: 50px;
+    text-align: center;
 }
 .inputbox:focus{
-    background-color:beige;
-    color: black;
+    /* background-color:beige; */
+    color: white;
+}
+
+form{
+    /* border:1px solid red; */
+    display: block;
+    margin: auto;
+    text-align: center;
 }
 .signupbox3{
     width: 600px;
